@@ -258,7 +258,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  put:
+    put:
       tags:
         - Shipments
       summary: 'Update shipment'
