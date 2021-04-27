@@ -280,7 +280,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DTOShipmentCreate'
+                $ref: '#/components/schemas/DTOShipment'
       responses:
         '200':
           description: 'Success'
