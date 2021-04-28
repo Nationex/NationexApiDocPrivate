@@ -427,12 +427,12 @@ paths:
         - name: orientation
           in: query
           description: Orientation of the file
-          example: portrait
+          example: landscape
           required: false
           schema:
             type: string
-            enum: [portrait]
-            default: portrait
+            enum: [landscape, portrait]
+            default: landscape
         - name: format
           in: query
           description: Page format of the file
