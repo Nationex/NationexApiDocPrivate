@@ -264,6 +264,8 @@ paths:
       summary: 'Update shipment'
       description: 'Update Address, SNR or notes of a shipment'
       operationId: updateShipment
+      security:
+        - BasicAuth: []
       parameters:
         - name: id
           in: path
