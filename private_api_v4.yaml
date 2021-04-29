@@ -167,6 +167,13 @@ paths:
           required: false
           schema:
             type: boolean
+        - name: key
+          in: query
+          description: (Optional) Allows someone with the key to access the shipment without having Api Basic credentials, the key is unique to the shipment.
+          example: "1Z5DKWDpyPfcRDuY13W0UzI5LKfpelgod"
+          required: false
+          schema:
+            type: string
       responses:
         '200':
           description: 'Details about a shipment by ID'
@@ -276,6 +283,13 @@ paths:
             format: int32
             minimum: 100000000
             maximum: 999999999
+        - name: key
+          in: query
+          description: (Optional) Allows someone with the key to access the shipment without having Api Basic credentials, the key is unique to the shipment.
+          example: "1Z5DKWDpyPfcRDuY13W0UzI5LKfpelgod"
+          required: false
+          schema:
+            type: string
       requestBody:
           description: "shipment info"
           required: true
