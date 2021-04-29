@@ -167,6 +167,13 @@ paths:
           required: false
           schema:
             type: boolean
+        - name: includeAll
+          in: query
+          description: Returns all parcel histories that are normally not displayed on the website. This parameter is hidden from the public Api.
+          example: true
+          required: false
+          schema:
+            type: boolean
         - name: key
           in: query
           description: (Optional) Allows someone with the key to access the shipment without having Api Basic credentials, the key is unique to the shipment.
