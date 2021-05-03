@@ -2230,7 +2230,7 @@ components:
           enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
           description: "Global status of the entire shipment"
           example: 'DataReceived'
-        ShipmentStatusFr:ma
+        ShipmentStatusFr:
           type: string
           description: "Readable ShipmentStatus in french"
           example: "Données reçues"
