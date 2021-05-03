@@ -2235,7 +2235,7 @@ components:
           example: 5.5
         ShipmentStatus:
           type: string
-          enum: [DataReceived, InTransit, OutForDelivery, AwaitingPickup, OnHold, Cancelled, Completed]
+          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyDelivered]
           description: "Global status of the entire shipment"
           example: 'DataReceived'
         ShipmentStatusFr:
