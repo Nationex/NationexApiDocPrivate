@@ -2510,11 +2510,6 @@ components:
           example: true
           #TODO : description
           default: false
-        ConsigneeCustomerIdLink:
-          type: integer
-          format: int32
-          #TODO : description
-          example: 165556
         AutoCollect:
           type: boolean
           #TODO : description
