@@ -2516,7 +2516,6 @@ components:
         AutoCollect:
           type: boolean
           #TODO : description
-        # TODO : IsArchive ?
           default: false
         SNR:
           type: boolean
