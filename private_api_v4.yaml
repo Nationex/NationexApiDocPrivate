@@ -2460,6 +2460,7 @@ components:
         Email:
           type: string
           example: example@gmail.com
+          maxLength: 50
         Phone:
           type: string #TODO: Regex ?
           example: 4183776671
