@@ -80,7 +80,6 @@ paths:
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -392,7 +391,6 @@ paths:
               schema:
                 type: string
                 format: binary 
-                example: "" #TODO: PDF example
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
@@ -471,7 +469,6 @@ paths:
               schema:
                 type: string
                 format: binary
-                example: "" #TODO: PDF example
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
@@ -715,7 +712,6 @@ paths:
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -774,7 +770,6 @@ paths:
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -835,7 +830,6 @@ paths:
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -897,7 +891,6 @@ paths:
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -965,7 +958,6 @@ paths:
       responses:
         '200':
           description: 'Success'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1118,7 +1110,6 @@ paths:
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1166,13 +1157,11 @@ paths:
           schema:
             type: string
             maxLength: 6
-            #TODO : Pattern
       security:
         - BasicAuth: []
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1235,7 +1224,6 @@ paths:
           example: "2021-03-31"
           schema:
             type: string
-            format: date-time #TODO À tester/vérifier
         - in: query
           name: endDate
           description: Ending date of the shipments included in the manifest. Defaults to current date
@@ -1243,7 +1231,6 @@ paths:
           example: "2021-03-31"
           schema:
             type: string
-            format: date-time #TODO À tester/vérifier
       security:
         - BasicAuth: []
       responses:
@@ -1255,13 +1242,11 @@ paths:
                 type: string
                 description: Used only with `application/pdf` responses
                 example: attachment; filename="manifest_2021-04-28.pdf"
-          #TODO Response
           content:
             application/pdf:
               schema:
                 type: string
                 format: binary
-                example: "" #TODO: PDF example
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
@@ -1302,7 +1287,6 @@ paths:
           example: "2021-03-31"
           schema:
             type: string
-            format: date-time #TODO À tester/vérifier
         - in: query
           name: endDate
           description: Ending date of the shipments included in the report. Defaults to the current date
@@ -1310,7 +1294,6 @@ paths:
           example: "2021-03-31"
           schema:
             type: string
-            format: date-time #TODO À tester/vérifier
         - in: query
           name: format
           description: Format of the report, either pdf or xlsx. Defaults to PDF
@@ -1331,12 +1314,6 @@ paths:
                 type: string
                 description: Used only with `application/pdf` responses
                 example: attachment; filename="manifest_2021-04-28.pdf"
-          #TODO Response
-          #content: TODO : Can't specify format
-           # application/pdf:
-            #  schema:
-             #   type: string
-              #  format: binary
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
@@ -1382,7 +1359,6 @@ paths:
       responses:
         '200':
           description: 'Success'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1448,25 +1424,24 @@ paths:
             maximum: 999999999
         - in: query
           name: email
-          description: Email address #TODO: Can we put multiple emails ?
+          description: Email address
           required: true
           example: myemail@gmail.com
           schema:
             type: string
         - in: query
           name: language
-          description: "Email language" #TODO: Can we put multiple emails ?
-          required: true #TODO: required ?
+          description: "Email language"
+          required: true
           example: Fr
           schema:
             type: string
-            enum: [Undefined, Fr, En] #TODO : Test this
+            enum: [Undefined, Fr, En]
       security:
         - BasicAuth: []
       responses:
         '200':
           description: 'Success'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1532,25 +1507,24 @@ paths:
             maximum: 999999999
         - in: query
           name: email
-          description: Email address #TODO: Can we put multiple emails ?
+          description: Email address
           required: true
           example: myemail@gmail.com
           schema:
             type: string
         - in: query
           name: language
-          description: "Email language" #TODO: Can we put multiple emails ?
-          required: true #TODO: required ?
+          description: "Email language" 
+          required: true
           example: Fr
           schema:
             type: string
-            enum: [Undefined, Fr, En] #TODO : Test this
+            enum: [Undefined, Fr, En]
       security:
         - BasicAuth: []
       responses:
         '200':
           description: 'Success'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1673,13 +1647,11 @@ paths:
           schema:
             type: string
             maxLength: 6
-            #TODO : Pattern
       security:
         - BasicAuth: []
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1751,7 +1723,6 @@ paths:
       responses:
         '200':
           description: 'Ok'
-          #headers TODO : Include headers
           content:
             application/json:
               schema:
@@ -1857,7 +1828,7 @@ components:
           type: string
           format: date-time
           description: 'Date time of the event'
-          example: "2021-03-31 13:31:00" #TODO : Exact format
+          example: "2021-03-31 13:31:00"
         ExceptionId:
           type: integer
           format: int32
@@ -1957,7 +1928,6 @@ components:
           type: string
           example: H2H2S2
           maxLength: 6
-          #TODO : Pattern
         City:
           type: string
           example: Montreal
@@ -1966,29 +1936,22 @@ components:
           type: string
           example: QC
           maxLength: 50
-        #CountryCode: TODO : include countrycode ?
-        #  type: string
-        #  description: ""
-        #NationexZone: TODO : include countrycode ?
-          #type: string
-          #description: TODO : description
         Phone:
-          type: string #TODO: Regex ?
+          type: string
           example: 4183776671
           maxLength: 15
         IsResidential:
           type: boolean
           example: true
-          #TODO : description
           default: false
         SmsNotification:
           type: boolean
-          description: Enable or disable SMS notifications #TODO : Expand more info
+          description: Enable or disable SMS notifications
           example: true
           default: false
         EmailNotification:
           type: boolean
-          description: Enable or disable Email notifications #TODO : Expand more info
+          description: Enable or disable Email notifications
           example: true
           default: false
         NoCivic:
@@ -2005,9 +1968,6 @@ components:
           description: Name of the street
           example: Rue Claudia
           maxLength: 50
-        #Language: todo: Language
-          #type: string
-          #description: TODO : description
         Email:
           type: string
           maxLength: 255
@@ -2207,12 +2167,6 @@ components:
           type: string
           example: QC
           maxLength: 50
-        #CountryCode: TODO: Include country code ?
-        #  type: string
-          #description: TODO : description
-        #NationexZone: TODO : Include nationex zone ?
-        #  type: string
-          #description: TODO : description
         Phone:
           type: string
           description: "Sender's phone number"
@@ -2221,12 +2175,12 @@ components:
           type: boolean
         SmsNotification:
           type: boolean
-          description: Enable or disable SMS notifications #TODO : Expand more info
+          description: Enable or disable SMS notifications
           example: true
           default: false
         EmailNotification:
           type: boolean
-          description: Enabled or disables Email notifications #TODO : Expand more info
+          description: Enabled or disables Email notifications
           example: true
           default: false
         NoCivic:
@@ -2305,7 +2259,6 @@ components:
           enum: [Delivery, PickupReturn, PickupDelivery]
           example: Delivery
           default: Delivery
-          #description: TODO : description
         ReferenceNumber:
           type: string
           description: Reference number, string which can be used to track the shipment
@@ -2527,23 +2480,22 @@ components:
           type: string
           example: H2H2S2
           maxLength: 6
-          #TODO : Pattern
         Email:
           type: string
           example: example@gmail.com
           maxLength: 50
         Phone:
-          type: string #TODO: Regex ?
+          type: string 
           example: 4183776671
           maxLength: 15
         SMSNotification:
           type: boolean
-          description: Enables or disable SMS notifications #TODO : Expand more info
+          description: Enables or disable SMS notifications
           example: true
           default: false
         EmailNotification:
           type: boolean
-          description: Enabled or disables Email notifications #TODO : Expand more info
+          description: Enabled or disables Email notifications
           example: true
           default: false
         Contact:
@@ -2577,11 +2529,9 @@ components:
         IsResidential:
           type: boolean
           example: true
-          #TODO : description
           default: false
         AutoCollect:
           type: boolean
-          #TODO : description
           default: false
         SNR:
           type: boolean
@@ -2608,7 +2558,6 @@ components:
           type: number
           format: float
           description: Renewal amount
-          #TODO : Restrictions ? more description ?
           example: 200.00
         Gst:
           type: number
@@ -2636,7 +2585,6 @@ components:
           example: 47.22
         SurchargeCharges:
           description: "Special charges for excessive parcel length or remote areas"
-          # TODO : Examples
           type: array
           items:
             $ref: '#/components/schemas/DTOSurchargeCharge'
@@ -2645,13 +2593,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/DTOTaxCharge'
-          #TODO: Examples
         AccessoryCharges:
           description: "Optionnal charges for extra services. Include Freezing protection, Dangerous goods, Special 10h30 service, COD and Insurance"
           type: array
           items:
             $ref: '#/components/schemas/DTOAccessoryCharge'
-            #todo: Examples
         NCVCharge:
           type: number
           format: float
@@ -2668,7 +2614,7 @@ components:
         FuelRate:
           type: number
           format: float
-          description: "Rate of fuel charge, varies week to week" #todo: specify if rate or percent
+          description: "Rate of fuel charge, varies week to week"
           example: 0.1425
         FuelCharge:
           type: number
