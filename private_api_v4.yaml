@@ -2859,16 +2859,16 @@ components:
           example: "2021-05-04"
         InvoiceLinkToken:
           description: "Link to download invoice"
-          format: string
+          type: string
         ManifestPDFLinkToken:
           description: "Link to download PDF"
-          format: string
+          type: string
         ManifestExcelLinkToken:
           description: "Link to download Excel"
-          format: string
+          type: string
         MiscLinkToken:
           description: "Link to download Misc"
-          format: string
+          type: string
     DTOPhoto:
       type: object
       description: "Contains the Id of the picture or signature and Base64 string data"
