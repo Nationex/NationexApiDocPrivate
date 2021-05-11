@@ -805,6 +805,71 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Users/{id}/changePassword:
+    post:
+      tags:
+        - Users
+      summary: Change Password'
+      description: 'Change a user''s password'
+      operationId: changePassword
+      parameters:
+        - name: id
+          in: path
+          description: ID of the user
+          required: true
+          example: 1038
+          schema:
+            type: integer
+            format: int32
+      requestBody:
+        description: Request to change password
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DTOChangePasswordRequest'
+      security: [] # no authentication
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "Page not found"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Customers/{id}/:
     get:
       tags:
