@@ -695,6 +695,61 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Users/loginConsignee:
+    post:
+      tags:
+        - Users
+      summary: 'Get login'
+      description: 'Get WebKey from shipmentId, postal code, last 4 characters of note'
+      requestBody:
+        description: A JSON object containing the login and password
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DTOLoginConsigneeRequest'
+      security: [] # no authentication
+      responses:
+        '200':
+          description: 'WebKey to access some restricted features'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: string
+              examples:
+                    String Response:
+                      value:
+                        'fHbI7OcsqV3crWztsk12tTCn8CNLmiZop'
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ShipmentId 501399432 does not exist"
+        '500':
+          description: 'InternalServerError: There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Users/:
     put:
       tags:
@@ -1880,6 +1935,25 @@ components:
           type: string
           description: User's password
           example: password123
+    DTOLoginConsigneeRequest:
+      type: object
+      required:
+        - ShipmentId
+        - PostalCode
+        - NoteEnd
+      properties:
+        ShipmentId:
+          type: string
+          description: 9 digits number, used to identify and track the shipment
+          example: user123
+        PostalCode:
+          type: string
+          description: User's password
+          example: A0A0A7
+        NoteEnd:
+          type: string
+          description: '4 last characters of the shipment Note'
+          example: 8293
     DTOUser:
       type: object
       required:
