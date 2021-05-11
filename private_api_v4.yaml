@@ -1897,6 +1897,47 @@ components:
           type: string
           description: User's email
           example: test@test.com
+        FirstName:
+          type: string
+          description: First name
+          example: Joe
+        LastName:
+          type: string
+          description: Last name
+          example: Dough
+        IsMaster:
+          type: boolean
+          description: Is master
+        LastLogin:
+          type: string
+          format: date-time
+          description: Date and time of last login
+        LastUpdate:
+          type: string
+          format: date-time
+          description: Date and time of last update
+        DateInsert:
+          type: string
+          format: date-time
+          description: Date and time of creation
+        DownloadManifest:
+          type: boolean
+          description: Has access to download manifest
+        ShowRate:
+          type: boolean
+          description: Has access to see rates
+        ShowInvoice:
+          type: boolean
+          description: Has access to see invoices
+        RenewEconomax:
+          type: boolean
+          description: Has access to renew economax package
+        ShowEconomaxBank:
+          type: boolean
+          description: Has access to see economax balance
+        ShowShipmentHistory:
+          type: boolean
+          description: Has access to see shipment history
     DTOParcelHistory:
       type: object
       description: 'Event of a single parcel'
