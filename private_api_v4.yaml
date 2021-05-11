@@ -1959,6 +1959,10 @@ components:
       required:
         - Username
       properties:
+        UserId:
+          type: string
+          description: User Id
+          example: 29109
         Username:
           type: string
           description: User's username
