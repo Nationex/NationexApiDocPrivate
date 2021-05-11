@@ -3070,6 +3070,19 @@ components:
         MiscLinkToken:
           description: "Link to download Misc"
           type: string
+    DTOChangePasswordRequest:
+      type: object
+      description: "Change password request info"
+      properties:
+        UserId:
+          type: string
+          example: 8392
+        OldPassword:
+          type: string
+          example: j9ijljsef0lije
+        NewPassword:
+          type: string
+          example: lawow90imldkf
     DTOPhoto:
       type: object
       description: "Contains the Id of the picture or signature and Base64 string data"
