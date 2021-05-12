@@ -3724,6 +3724,14 @@ components:
           format: int32
           description: Id to retrieve and modify the consignee
           example: 20102848
+    DTOContactCreated:
+      type: object
+      properties:
+        ConsigneeId:
+          type: integer
+          format: int32
+          description: Id to retrieve and modify the contact
+          example: 10102848
     DTOLocation:
       type: object
       description: "Postal code availability information"
