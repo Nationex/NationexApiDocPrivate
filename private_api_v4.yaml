@@ -2695,7 +2695,7 @@ components:
         ShipmentId:
           type: string
           description: 9 digits number, used to identify and track the shipment
-          example: user123
+          example: 501293849
         PostalCode:
           type: string
           description: 'Postal code of the shipment'
