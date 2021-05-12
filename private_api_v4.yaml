@@ -1449,7 +1449,7 @@ paths:
       tags:
         - Customers
       summary: 'Validate Consignee'
-      description: 'Returns an error 400 if consignee is invalid'
+      description: 'Returns true if the consignee is not a duplicate'
       parameters:
         - in: path
           name: id
@@ -1491,15 +1491,6 @@ paths:
                     Boolean Response:
                       value:
                         true
-        '400':
-          description: 'InvalidInput: The address is invalid or already exists'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/InvalidInput'
-              example: 
-                code: 400
-                message: "Address1 'abc' is invalid"
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
