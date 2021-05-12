@@ -1514,7 +1514,7 @@ paths:
       tags:
         - Customers
       summary: 'Import Consignees'
-      description: 'Imports a list of consignees file'
+      description: 'Imports a list of consignees file, xlsx format'
       parameters:
         - in: path
           name: id
