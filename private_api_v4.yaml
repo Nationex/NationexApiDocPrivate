@@ -1779,7 +1779,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Customers/{id}/contacts:
+  /Customers/{id}/contacts/:
     get:
       tags:
         - Customers
@@ -1818,6 +1818,66 @@ paths:
                 message: "Invalid key"
         '500':
           description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Customers/{id}/contacts:
+    post:
+      tags:
+        - Customers
+      summary: 'Create contact'
+      description: 'Create contact'
+      parameters:
+        - in: path
+          name: id
+          description: Nationex Customer Id (5 or 6 digits)
+          required: true
+          example: 113300
+          schema:
+            type: integer
+            format: int32
+            minimum: 10000
+            maximum: 999999
+      requestBody:
+          description: Contact to create
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOContact'
+      security:
+        - BasicAuth: []
+      responses:
+        '200':
+          description: 'Ok'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOContactCreated'
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ContactId 388283984 does not exist"
+        '500':
+          description: 'InternalServerError: There has been an unexpected error in our server'
           content:
             application/json:
               schema:
