@@ -501,7 +501,7 @@ paths:
       tags:
         - Shipments
       summary: 'Get shipment list'
-      description: 'Returns the list of shipment'
+      description: 'Returns the list of shipments if searching by address, or a list containing a single shipment if searching by waybill (ShipmentId, Barcode, ParcelId or Reference)'
       operationId: getListShipment
       parameters:
         - name: customer
@@ -519,6 +519,13 @@ paths:
           schema:
             type: string
           example: 123 Main Street, New York, NY 10030
+        - name: waybill
+          in: query
+          description: Get single shipment from ShipmentId, Barcode, ParcelId or Reference
+          required: false
+          schema:
+            type: string
+          example: 501938372
         - name: startDate
           in: query
           description: Start date in date range, defaults to current date.
@@ -580,63 +587,6 @@ paths:
                 message: "ShipmentId 501399432 does not exist"
         '500':
           description: 'InternalServerError: 	There has been an unexpected error in our server'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/InternalServerError'
-              example: 
-                code: 500
-                message: "Internal server error"
-  /Shipments/search:
-    get:
-      tags:
-        - Shipments
-      summary: 'Search Shipment'
-      description: 'Get single shipment from ShippingId, Barcode, ParcelId or Reference'
-      operationId: searchShipment
-      parameters:
-        - name: customer
-          in: query
-          description: Nationex Customer Id (5 or 6 digits)
-          required: true
-          example: 113300
-          schema: 
-            type: integer
-            format: int32
-        - name: search
-          in: query
-          description: Query string for search
-          required: false
-          schema:
-            type: string
-          example: 501938372
-      responses:
-        '200':
-          description: 'Success'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/DTOShipment'
-        '401':
-          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/Unauthorized'
-              example: 
-                code: 401
-                message: "Invalid key"
-        '404':
-          description: 'NotFound: The resource requested does not exist'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/NotFound'
-              example: 
-                code: 404
-                message: "ShipmentId 501399432 does not exist"
-        '500':
-          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
