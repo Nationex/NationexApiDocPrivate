@@ -3514,6 +3514,68 @@ components:
         MiscLinkToken:
           description: "Link to download Misc"
           type: string
+    DTOContact:
+      type: object
+      description: "Contact for nationex customer"
+      properties:
+        ContactId:
+          type: integer
+          format: int32
+          example: 10038
+        Name:
+          type: string
+          example: 'Joe Blo'
+        Title:
+          type: string
+          example: 'Director'
+        Email:
+          type: string
+          example: 'joeblo@gmail.com'
+        Phone:
+          type: string
+          example: '8302938472'
+        Fax:
+          type: string
+          example: '8302938472'
+        Language:
+          type: string
+          enum: [Fr, En]
+          example: 'Fr'
+        FirstContact:
+          description: 'First contact'
+          type: boolean
+          example: false
+          default: false
+        EmergencyContact:
+          description: 'Contact for emergency'
+          type: boolean
+          example: false
+          default: false
+        EdiContact:
+          description: 'Contact for EDI'
+          type: boolean
+          example: false
+          default: false
+        AccountingContact:
+          description: 'Contact for accounting'
+          type: boolean
+          example: false
+          default: false
+        SalesContact:
+          description: 'Contact for sales'
+          type: boolean
+          example: false
+          default: false
+        OperationsContact:
+          description: 'Contact for operations'
+          type: boolean
+          example: false
+          default: false
+        CustomerServiceContact:
+          description: 'Contact for customer service'
+          type: boolean
+          example: false
+          default: false
     DTOChangePasswordRequest:
       type: object
       description: "Change password request info"
