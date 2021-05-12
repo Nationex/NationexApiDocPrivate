@@ -2695,10 +2695,10 @@ components:
         ShipmentId:
           type: string
           description: 9 digits number, used to identify and track the shipment
-          example: user123
+          example: 501293849
         PostalCode:
           type: string
-          description: User's password
+          description: 'Postal code of the shipment'
           example: A0A0A7
         NoteEnd:
           type: string
@@ -3292,6 +3292,7 @@ components:
           type: string
           description: Reference number, string which can be used to track the shipment
           example: CX4335
+          maxLength: 15
         Note:
           type: string
           description: A Delivery Note
