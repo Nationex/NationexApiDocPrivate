@@ -707,7 +707,7 @@ paths:
       tags:
         - Users
       summary: 'Get login'
-      description: 'Get WebKey from shipmentId, postal code, last 4 characters of note'
+      description: 'Get WebKey from shipmentId, postal code, last 4 digits of phone number'
       requestBody:
         description: A JSON object containing the login and password
         required: true
@@ -2698,11 +2698,11 @@ components:
           example: user123
         PostalCode:
           type: string
-          description: User's password
+          description: 'Postal code of the shipment'
           example: A0A0A7
         NoteEnd:
           type: string
-          description: '4 last characters of the shipment Note'
+          description: '4 last digits of the shipment phone number'
           example: 8293
     DTOUser:
       type: object
