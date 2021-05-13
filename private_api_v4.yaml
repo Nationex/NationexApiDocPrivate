@@ -3837,6 +3837,13 @@ components:
           type: integer
           format: int32
           example: 10038
+        CustomerId:
+          type: integer
+          format: int32
+          description: Nationex Customer Id (5 or 6 digits)
+          example: 10288
+          minimum: 10000
+          maximum: 999999
         Name:
           type: string
           example: 'Joe Blo'
