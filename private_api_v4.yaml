@@ -3832,9 +3832,13 @@ components:
     DTOContact:
       type: object
       description: "Contact for nationex customer"
+      required:
+        - CustomerId
+        - Name
       properties:
         ContactId:
           type: integer
+          description: 'Id of the contact used to retrieve or edit. This property is ignored when creating a contact'
           format: int32
           example: 10038
         CustomerId:
