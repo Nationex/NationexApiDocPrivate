@@ -3859,18 +3859,23 @@ components:
         Name:
           type: string
           example: 'Joe Blo'
+          maxLength: 50
         Title:
           type: string
           example: 'Director'
+          maxLength: 100
         Email:
           type: string
           example: 'joeblo@gmail.com'
+          maxLength: 100
         Phone:
           type: string
           example: '8302938472'
+          maxLength: 20
         Fax:
           type: string
           example: '8302938472'
+          maxLength: 20
         Language:
           type: string
           enum: [Fr, En]
