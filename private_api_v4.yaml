@@ -1393,7 +1393,7 @@ paths:
         - in: query
           name: paging
           description: Page number starting at 0
-          required: true
+          required: false
           example: 0
           schema:
             type: integer
@@ -1402,12 +1402,20 @@ paths:
         - in: query
           name: count
           description: Number of consignees returned
-          required: true
+          required: false
           example: 100
           schema:
             type: integer
             format: int32
             maximum: 5000
+            default: 100
+        - in: query
+          name: search
+          description: 'Address string to be searched, if empty all consignees will be returned'
+          required: false
+          example: '123 rue Patate'
+          schema:
+            type: string
         - in: query
           name: includeArchived
           description: If true, also return the consignees that have been deleted
