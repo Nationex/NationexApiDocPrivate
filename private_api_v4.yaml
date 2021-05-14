@@ -1607,7 +1607,7 @@ paths:
           example: 104423
           schema:
             type: integer
-            format: int64
+            format: int32
       security:
         - BasicAuth: []
       responses:
@@ -1667,7 +1667,7 @@ paths:
           example: 104553
           schema:
             type: integer
-            format: int64
+            format: int32
       requestBody:
           description: Contact to modify
           required: true
@@ -1741,7 +1741,7 @@ paths:
           example: 104644
           schema:
             type: integer
-            format: int64
+            format: int32
       security:
         - BasicAuth: []
       responses:
