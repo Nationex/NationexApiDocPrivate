@@ -762,7 +762,7 @@ paths:
       tags:
         - Users
       summary: 'Create user'
-      description: 'Update an user account'
+      description: "Create a user's account"
       operationId: createUser
       requestBody:
         description: User object as JSON
