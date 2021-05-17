@@ -2857,6 +2857,12 @@ components:
           description: "Amount of cash on delivery"
     DTODestination:
       type: object
+      required:
+          - AccountName
+          - Address1
+          - PostalCode
+          - City
+          - Phone
       properties:
         Contact:
           type: string
@@ -2915,7 +2921,7 @@ components:
           default: false
         NoCivic:
           type: string
-          description: Civic address number or street number
+          description: Civic address number or street number (Use either Address 1 or a combination of NoCivic/StreetName)
           example: 880
           maxLength: 20
         Suite:
@@ -3088,6 +3094,12 @@ components:
           description: "Hide the account number on the label"
     DTOSender:
       type: object
+      required:
+          - AccountName
+          - Address1
+          - PostalCode
+          - City
+          - Phone
       properties:
         Contact:
           type: string
@@ -3144,7 +3156,7 @@ components:
           default: false
         NoCivic:
           type: string
-          description: Civic address number or street number
+          description: Civic address number or street number (Use either Address 1 or a combination of NoCivic/StreetName)
           example: 880
           maxLength: 20
         Suite:
