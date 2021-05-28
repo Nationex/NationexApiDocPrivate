@@ -3185,8 +3185,6 @@ components:
           type: string
           description: "Sender's phone number"
           example: 555123456
-        IsResidential:
-          type: boolean
         SmsNotification:
           type: boolean
           description: Enable or disable SMS notifications
