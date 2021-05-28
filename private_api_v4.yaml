@@ -2952,10 +2952,6 @@ components:
           type: string
           example: 4183776671
           maxLength: 15
-        IsResidential:
-          type: boolean
-          example: true
-          default: false
         SmsNotification:
           type: boolean
           description: Enable or disable SMS notifications
