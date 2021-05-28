@@ -3539,10 +3539,6 @@ components:
           description: Name of the street
           example: Rue Claudia
           maxLength: 50
-        IsResidential:
-          type: boolean
-          example: true
-          default: false
         AutoCollect:
           type: boolean
           default: false
