@@ -2755,7 +2755,7 @@ components:
           type: string
           description: 'Postal code of the shipment'
           example: A0A0A7
-        NoteEnd:
+        PhoneEnd:
           type: string
           description: '4 last digits of the shipment phone number'
           example: 8293
