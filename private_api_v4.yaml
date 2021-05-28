@@ -709,7 +709,7 @@ paths:
       summary: 'Get login'
       description: 'Get WebKey from shipmentId, postal code, last 4 digits of phone number'
       requestBody:
-        description: A JSON object containing the login and password
+        description: A JSON object containing the login information
         required: true
         content: 
           application/json:
