@@ -2762,12 +2762,19 @@ components:
     DTOUser:
       type: object
       required:
+        - UserId
         - Username
+        - Password
+        - CustomerId
       properties:
         UserId:
           type: string
           description: User Id
           example: 29109
+        CustomerId:
+          type: string
+          description: Nationex Customer Id (5 or 6 digits) of the collect account
+          example: 165556
         Username:
           type: string
           description: User's username
@@ -2821,6 +2828,12 @@ components:
         ShowShipmentHistory:
           type: boolean
           description: Has access to see shipment history
+        ChangePasswordNextLogin:
+          type: boolean
+          description: Change password at next login
+        Active:
+          type: boolean
+          description: Is Active
     DTOParcelHistory:
       type: object
       description: 'Event of a single parcel'
