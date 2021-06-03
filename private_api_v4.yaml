@@ -2777,16 +2777,12 @@ components:
           example: 165556
         Username:
           type: string
-          description: User's username
-          example: User123
+          description: User's username, preferably his email
+          example: test838@gmail.com
         Password:
           type: string
           description: User's password
           example: Password123
-        Email:
-          type: string
-          description: User's email
-          example: test@test.com
         FirstName:
           type: string
           description: First name
