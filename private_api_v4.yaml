@@ -858,6 +858,65 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Shipments/advanced:
+    post:
+      tags:
+        - Shipments
+      summary: 'Get shipment list advanced'
+      description: 'Returns the list of shipments'
+      operationId: getListShipmentAdvanced
+      requestBody:
+          description: Shipment to create
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOShipmentAdvancedSearch'
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DTOShipment'
+        '400':
+          description: 'InvalidInput:	The max length of a field has been exceeded or other input error. Specific error message will be returned'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InvalidInput'
+              example: 
+                code: 400
+                message: "Address length is too long"
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ShipmentId 501399432 does not exist"
+        '500':
+          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Users/login:
     post:
       tags:
@@ -4173,6 +4232,85 @@ components:
         NewPassword:
           type: string
           example: lawow90imldkf
+    DTOShipmentAdvancedSearch:
+      type: object
+      description: "Contains multiple fields for advanced shipment search"
+      properties:
+        ShipmentId:
+          type: integer
+          format: int32
+          description: "Shipment Id (9 digits)"
+        ParcelId:
+          type: integer
+          format: int64
+          description: "Parcel id (11 digits)"
+        DateStart:
+          type: string
+          format: date
+          description: "To search between two dates, this is the beginning date"
+        DateEnd:
+          type: string
+          format: date
+          description: "To search between two dates, this is the end date"
+        Reference:
+          type: string
+          description: "Shipment's reference"
+          maxLength: 15
+        ShipmentType:
+          type: string
+          enum: [Delivery, PickupReturn, PickupDelivery]
+          description: "Shipment type, if null it will return all types"
+        ExpDate:
+          type: string
+          format: date
+          description: "Date of the shipment"
+        ConsigneeAccountId:
+          type: string
+          description: "Account Id used to identify and retrieve the consignee"
+          example: NC33233
+          maxLength: 15
+        ConsigneeName:
+          type: string
+          description: Consignee name
+          example: Coffee Shop
+          maxLength: 40
+        ConsigneeAddress:
+          type: string
+          description: Consignee ddress, includes street number and street name
+          example: 433 Apple street
+          maxLength: 35
+        ConsigneeCity:
+          type: string
+          example: Montreal
+          maxLength: 35
+        ConsigneeProvince:
+          type: string
+          example: QC
+          maxLength: 50
+        ConsigneePostalCode:
+          type: string
+          example: H2H2S2
+          maxLength: 6
+        ConsigneeEmail:
+          type: string
+          example: example@gmail.com
+          maxLength: 50
+        ConsigneePhone:
+          type: string 
+          example: 4183776671
+          maxLength: 15
+        Page:
+          type: integer
+          format: int32
+          default: 0
+          example: 0
+          description: "Page of the results"
+        Size:
+          type: integer
+          format: int32
+          default: 100
+          maximum: 1000
+          description: "Size of the page of results"   
     DTOPhoto:
       type: object
       description: "Contains the Id of the picture or signature and Base64 string data"
