@@ -3031,6 +3031,7 @@ components:
         - UserId
         - Username
         - Password
+        - Email
         - CustomerId
       properties:
         UserId:
@@ -3049,6 +3050,9 @@ components:
           type: string
           description: User's password
           example: Password123
+        Email:
+          type: string
+          example: test838@gmail.com
         FirstName:
           type: string
           description: First name
