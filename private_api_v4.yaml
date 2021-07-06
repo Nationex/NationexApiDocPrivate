@@ -3263,6 +3263,24 @@ components:
           type: string
           maxLength: 255
           example: example@gmail.com
+        DeliveryDays:
+          description: "Days of week serviced by Nationex."
+          type: array
+          items:
+            type: string
+            enum: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+        DepotShort:
+          description: "Nationex depot associated to the destination"
+          type: string
+          example: "BLV"
+        SectorId:
+          type: integer
+          example: 534
+          description: "Sector Id associated to the destination"
+        RouteId:
+          type: integer
+          example: 53404
+          description: "Route Id associated the destination"
     DTOCustomerInfo:
       type: object
       properties:
@@ -3495,6 +3513,24 @@ components:
         Email:
           type: string
           example: example@gmail.com
+        DeliveryDays:
+          description: "Days of week serviced by Nationex for this postal code"
+          type: array
+          items:
+            type: string
+            enum: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+        DepotShort:
+          description: "Nationex depot associated to the sender"
+          type: string
+          example: "BLV"
+        SectorId:
+          type: integer
+          example: 534
+          description: "Sector Id associated to the sender"
+        RouteId:
+          type: integer
+          example: 53404
+          description: "Route Id associated to the sender"
     DTOShipment:
       type: object
       required:
