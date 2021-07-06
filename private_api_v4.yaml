@@ -3046,10 +3046,12 @@ components:
           type: string
           description: User's username, preferably his email
           example: test838@gmail.com
+          maxLength: 255
         Password:
           type: string
           description: User's password
           example: Password123
+          maxLength: 255
         Email:
           type: string
           example: test838@gmail.com
@@ -3057,10 +3059,12 @@ components:
           type: string
           description: First name
           example: Joe
+          maxLength: 255
         LastName:
           type: string
           description: Last name
           example: Dough
+          maxLength: 255
         IsMaster:
           type: boolean
           description: Is master
