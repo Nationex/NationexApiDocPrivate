@@ -2955,6 +2955,62 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"     
+  /ParcelHistory:
+    post:
+      tags:
+        - ParcelHistory
+      summary: 'Insert ParcelHistories'
+      description: 'Insert ParcelHistories'
+      security:
+        - BasicAuth: []
+      requestBody:
+          description: ParcelHistories to insert
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOParcelHistories'
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '400':
+          description: 'InvalidInput: ParcelIds is required'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InvalidInput'
+              example: 
+                code: 400
+                message: "ParcelIds is required"
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
 components:
   securitySchemes:
     BasicAuth:     # <-- arbitrary name for the security scheme
@@ -4505,5 +4561,57 @@ SUVORK5CYII="
       description: "Stop for route, json structure not included in documentation"
       type: string
       example: {"StopsList":[{"Shipping_ID":103502163,"Parcel_IDs":"10350216301    10350216302    10350216303    10350216304    10350216305    10350216306    10350216307    95771547601    95771547602    95771547603    99992365701    ","Route_ID":50100,"No_Stop":1,"Lr_Name":"PROMOTION DU LIVRE SDM INC","Lr_Account_ID":0,"Lr_Phone":"450-581-9995","Address":{"Address1":"29 RUE DE LYON","Address2":"","No_Civic":"","Postal_Code":"J5Z4Z3","City":"REPENTIGNY","Phone":"450-581-9995","Province":null,"Country":null,"Latitude":45.734938,"Longitude":-73.487766},"Consol_ID":29543,"Min_Live_Route_Status":2,"Max_Live_Route_Status":2,"ShippingType":2,"EXP_DATE":"2021-06-30","REFERENCE_NO":"957715446","ParcelCompress":[{"Parcel_ID":10350216306,"Barcode":"103502163065","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503340,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0115 - VALLEYFIELD","Address1":"1770, BOUL. MONSEIGNEUR LANGLOIS","PostalCode":"J6S5R1"},{"Parcel_ID":10350216305,"Barcode":"103502163058","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503343,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0115 - VALLEYFIELD","Address1":"1770, BOUL. MONSEIGNEUR LANGLOIS","PostalCode":"J6S5R1"},{"Parcel_ID":10350216303,"Barcode":"103502163034","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503346,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0115 - VALLEYFIELD","Address1":"1770, BOUL. MONSEIGNEUR LANGLOIS","PostalCode":"J6S5R1"},{"Parcel_ID":10350216302,"Barcode":"103502163027","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503349,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0115 - VALLEYFIELD","Address1":"1770, BOUL. MONSEIGNEUR LANGLOIS","PostalCode":"J6S5R1"},{"Parcel_ID":10350216307,"Barcode":"103502163072","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503364,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0115 - VALLEYFIELD","Address1":"1770, BOUL. MONSEIGNEUR LANGLOIS","PostalCode":"J6S5R1"},{"Parcel_ID":10350216301,"Barcode":"103502163010","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503373,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0115 - VALLEYFIELD","Address1":"1770, BOUL. MONSEIGNEUR LANGLOIS","PostalCode":"J6S5R1"},{"Parcel_ID":10350216304,"Barcode":"103502163041","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503391,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0115 - VALLEYFIELD","Address1":"1770, BOUL. MONSEIGNEUR LANGLOIS","PostalCode":"J6S5R1"},{"Parcel_ID":95771547603,"Barcode":"957715476012","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503358,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0268 - CHICOUTIMI","Address1":"1257. BOUL. TALBOT","PostalCode":"G7H4C1"},{"Parcel_ID":95771547602,"Barcode":"957715476012","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503361,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0268 - CHICOUTIMI","Address1":"1257. BOUL. TALBOT","PostalCode":"G7H4C1"},{"Parcel_ID":95771547601,"Barcode":"957715476012","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503400,"Group_ID":0,"CustomerName":"CANADIAN TIRE #0268 - CHICOUTIMI","Address1":"1257. BOUL. TALBOT","PostalCode":"G7H4C1"},{"Parcel_ID":99992365701,"Barcode":"999923657012","No_Stop":1,"Live_Route_Status":2,"Live_Route_Type":20,"CODAmount":0.00,"CODType":0,"Service_10H30":0,"Frozen_Protection":0,"Dangerous":0,"Live_Route_ID":67503352,"Group_ID":0,"CustomerName":"Asmodee Canada","Address1":"31 rue de la Coopérative","PostalCode":"J0P1P0"}],"TotalCODAmount":0.00,"MaxCOD_TYPE":0,"TotalService_10H30":0,"TotalFrozen_Protection":0,"TotalDangerous":0,"TotalScanned":0,"TotalParcel":11,"TotalPickup":0,"Priority":9999,"Signature_Not_Required":false,"TotalMinutesTimestampFrom":0,"TotalMinutesTimestampTo":0,"ETA":"00:00","Forecasted_Arrival_Time":"00:00","Arrival_Time":"00:00","Note":"FAIRE P/U SELON GUILLAUME FREDERICK DE SDM (REMPLACE LE 957715446 QUI EST ANNULE)","CustomerName":"SDM","CustomerAutLive":true,"IsDeliveryManifest":false,"PuNoCharge":true,"TotalWeight":270.05,"MaxUpdateDate":"2021-07-06T13:58:46","LastParcelHistories":null,"NoCivic":null}],"TotalScannedCount":0,"TotalCount":11,"Route_ID":50100,"RouteStatus":2,"StopCount":1,"StopScannedCount":0,"Route_Driver_Name":"Route 1000 voiturier 1","TotalWeight":270.05,"RoutePolylines":"","HasBeenLocked":false,"LastUpdated":"2021-07-06T13:58:46","Notes":[]}
+    DTOParcelHistories:
+      description: "Parcel histories to be processed and inserted"
+      type: object
+      required:
+        - ProcessedDate
+        - ExceptionId
+        - ParcelIds
+      properties:
+          ParcelIds:
+            type: array
+            items:
+              type: integer
+              format: int64
+            example: [99999999901,99999999902]
+          ProcessedDate:
+            type: string
+            format: date-time
+            example: "2021-07-06 09:40:00"
+          RouteId:
+            type: integer
+            format: int32
+            example: 50109
+          Contact:
+            type: string
+            example: "Claire"
+          ExceptionId:
+            type: integer
+            format: int32
+            example: 119
+          SubExceptionId:
+            type: integer
+            format: int32
+          Reason:
+            type: string
+          VisitCode:
+            type: integer
+            format: int32
+          SourceType:
+            type: integer
+            format: int32
+          DepotId:
+            type: integer
+            format: int32
+          CustomerId:
+            type: integer
+            format: int32
+          UserId:
+            type: integer
+            format: int32
+          PostponedDate:
+            type: string
+            format: date-time
 security:
     - BasicAuth: []
