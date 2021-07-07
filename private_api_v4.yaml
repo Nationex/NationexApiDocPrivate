@@ -3682,6 +3682,10 @@ components:
           description: "Signatures and photos. Linked with the PhotoId's and SignatureId's from DTOParcelHistory"
         Stops:
           $ref: '#/components/schemas/DTOStops'
+        AllowedExceptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOException'
         CustomerNote:
           type: string
           example: "DEMENAGE"
@@ -4613,5 +4617,34 @@ SUVORK5CYII="
           PostponedDate:
             type: string
             format: date-time
+    DTOException:
+      type: object
+      description: "Exception code corresponding to parcel histories"
+      properties:
+        ExceptionId:
+          type: integer
+          example: 4
+        TxtFrench:
+          type: string
+          example: "Refusé - Retour à l'expéditeur"
+        TxtEnglish:
+          type: string
+          example: "Refused - Return to sender"
+        ContactAllowed:
+          type: boolean
+          default: false
+          example: false
+        ReasonAllowed:
+          type: boolean
+          default: false
+          example: false
+        TpslAllowed:
+          type: boolean
+          default: false
+          example: false
+        PostponedDateAllowed:
+          type: boolean
+          default: false
+          example: false
 security:
     - BasicAuth: []
