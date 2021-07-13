@@ -4671,6 +4671,24 @@ SUVORK5CYII="
           type: boolean
           default: false
           example: false
+        SubExceptions:
+          type: array
+          description: "Some exception codes have some sub exceptions"
+          items:
+            $ref: '#/components/schemas/DTOSubException'
+    DTOSubException:
+      type: object
+      description: "SubException code corresponding to parcel histories"
+      properties:
+        SubExceptionId:
+          type: integer
+          example: 110
+        TxtFrench:
+          type: string
+          example: "Colis non disponible pour cueillette - Nouvelle tentative le jour ouvrable suivant"
+        TxtEnglish:
+          type: string
+          example: "Merchandise not ready for pickup - 2nd attempt next day"
     DTOLoginRequest:
       type: object
       required:
