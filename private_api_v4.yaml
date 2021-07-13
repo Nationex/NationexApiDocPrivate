@@ -4684,7 +4684,7 @@ SUVORK5CYII="
         password:
           type: string
           description: User's password
-          example: NatPass1234
+          example: Password123
     DTOLoginResponse:
       description: "Login response"
       type: object
