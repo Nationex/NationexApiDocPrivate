@@ -929,18 +929,15 @@ paths:
         content: 
           application/json:
             schema:
-              $ref: '#/components/schemas/LoginRequest'
+              $ref: '#/components/schemas/DTOLoginRequest'
       security: [] # no authentication
       responses:
         '200':
-          description: >
-            Successfully authenticated
-            The session ID is returned in a cookie named `JSESSIONID`. You need to include this cookie in subsequent requests.
-          #headers:
-          #  Set-Cookie:
-          #    schema:
-          #      type: string
-          #      example: JSESSIONID=abcde12345; Path=/; HttpOnly
+          description: 'Login response, information about the user'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOLoginResponse'
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
@@ -960,7 +957,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1016,6 +1013,44 @@ paths:
                 message: "ShipmentId 501399432 does not exist"
         '500':
           description: 'InternalServerError: There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Users/emailAvailable:
+    get:
+      tags:
+        - Users
+      summary: 'Email Available'
+      description: 'Checks if email is available or already used'
+      operationId: emailAvailable
+      parameters:
+        - name: email
+          in: query
+          example: "test@test.com"
+          required: true
+          schema:
+            type: string
+      security: [] # no authentication
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3048,20 +3083,6 @@ components:
             schema:
               $ref: '#/components/schemas/Error'
   schemas:
-    LoginRequest:
-      type: object
-      required:
-        - username
-        - password
-      properties:
-        username:
-          type: string
-          description: User's username
-          example: user123
-        password:
-          type: string
-          description: User's password
-          example: password123
     DTOLoginConsigneeRequest:
       type: object
       required:
@@ -4650,5 +4671,34 @@ SUVORK5CYII="
           type: boolean
           default: false
           example: false
+    DTOLoginRequest:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          description: User's username
+          example: user123
+        password:
+          type: string
+          description: User's password
+          example: NatPass1234
+    DTOLoginResponse:
+      description: "Login response"
+      type: object
+      properties:
+          CustomerId:
+            type: integer
+            example: 113300
+          WebUserApiToken:
+            type: string
+            description: "API token to be used for authentication for future API calls"
+            example: JFIEJ9382H2HH4KJSI98
+          IsOldUser:
+            type: boolean
+            description: "If true, the username/password is from the old system and has to be replaced"
+            example: false
 security:
     - BasicAuth: []
