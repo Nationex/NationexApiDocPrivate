@@ -3094,14 +3094,18 @@ components:
           type: string
           description: 9 digits number, used to identify and track the shipment
           example: 501293849
-        PostalCode:
+        NoCivic:
           type: string
-          description: 'Postal code of the shipment'
-          example: A0A0A7
-        PhoneEnd:
+          description: 'Civic Number of the shipment'
+          example: 130
+        Email:
           type: string
-          description: '4 last digits of the shipment phone number'
-          example: 8293
+          description: 'Consignee Email'
+          example: test@test.com
+        Phone:
+          type: string
+          description: 'Consignee Phone'
+          example: "4382938449"
     DTOUser:
       type: object
       required:
