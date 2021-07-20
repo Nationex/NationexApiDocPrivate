@@ -776,11 +776,19 @@ paths:
           schema:
             type: integer
             format: int64
-        - name: emails
-          in: path
-          description: "Emails to be sent, must be separated by ';'"
+        - name: userId
+          in: query
+          description: ID of the User sending the email
           required: true
-          example: "test@test.com, test2@test.com"
+          example: 1080
+          schema:
+            type: integer
+            format: int32
+        - name: emails
+          in: query
+          description: "Email addesses to be sent to, must be separated by ';'"
+          required: true
+          example: "test@test.com; test2@test.com"
           schema:
             type: string
             maxLength: 2000
