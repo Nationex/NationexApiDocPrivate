@@ -620,7 +620,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Shipments/{id}/HoldPickup:
+  /Shipments/{id}/holdPickup:
     post:
       tags:
         - Shipments
@@ -686,7 +686,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Shipments/{id}/ReactivatePickup:
+  /Shipments/{id}/reactivatePickup:
     post:
       tags:
         - Shipments
@@ -733,6 +733,71 @@ paths:
               example: 
                 code: 400
                 message: "The shipment is of type Delivery, unable to reactivate pickup"
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ShipmentId 501399432 does not exist"
+        '500':
+          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Shipments/{id}/sendPOD:
+    post:
+      tags:
+        - Shipments
+      summary: 'Send POD'
+      description: 'Sends a POD (Proof of delivery) PDF to emails provided. It will be sent in the language of the customer.'
+      operationId: sendPOD
+      parameters:
+        - name: id
+          in: path
+          description: ID of the shipment
+          required: true
+          example: 103848576
+          schema:
+            type: integer
+            format: int64
+        - name: emails
+          in: path
+          description: "Emails to be sent, must be separated by ';'"
+          required: true
+          example: "test@test.com, test2@test.com"
+          schema:
+            type: string
+            maxLength: 2000
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
