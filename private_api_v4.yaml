@@ -3724,7 +3724,10 @@ components:
         MainSACagentName:
           type: string
           example: "Fred Lavallée"
-        Segment:
+        SegmentFr:
+          type: string
+          example: "Or"
+        SegmentEn:
           type: string
           example: "Gold"
     DTOShipmentCreate:
