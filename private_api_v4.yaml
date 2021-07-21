@@ -3838,7 +3838,13 @@ components:
             $ref: '#/components/schemas/DTOPhoto'
           description: "Signatures and photos. Linked with the PhotoId's and SignatureId's from DTOParcelHistory"
         Stops:
+          description: "Stops of the entire route for the current day for the shipment"
           $ref: '#/components/schemas/DTOStops'
+        StopHistory:
+          description: "History of stops for the shipment"
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOLiveRouteRow'
         AllowedExceptions:
           type: array
           items:
