@@ -4531,6 +4531,11 @@ components:
           type: integer
           format: int64
           description: "Parcel id (11 digits)"
+        CustomerId:
+          type: integer
+          format: int32
+          description: "Nationex CustomerId mandatory if the API key isn't linked to a customer"
+          example: 113300
         DateStart:
           type: string
           format: date
