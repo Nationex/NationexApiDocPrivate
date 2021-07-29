@@ -275,7 +275,7 @@ paths:
       tags:
         - Shipments
       summary: 'Update shipment'
-      description: 'Update Address, SNR or notes of a shipment'
+      description: "Update Sender Address, Destination Address, SNR or Notes of a shipment. Other fields can't be updated but an error will not be returned if an attempt is made to change an other field. False will be returned if nothing is changed"
       operationId: updateShipment
       security:
         - BasicAuth: []
