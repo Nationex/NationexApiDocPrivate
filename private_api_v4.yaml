@@ -3867,6 +3867,9 @@ components:
         CustomerName:
           type: string
           example: "Rick and Morty (EN)"
+        IsInvoiced:
+          type: boolean
+          example: false
     DTOShipmentCreate:
       type: object
       description: "Request object to create a shipment. For a Delivery and PickupDelivery type, Destination is required. For a PickupReturn and PickupDelivery type, Sender is required. Otherwise it is the customer's address by default"
