@@ -4591,6 +4591,18 @@ components:
           type: string 
           example: 4183776671
           maxLength: 15
+        COD:
+          type: boolean
+        Insurance:
+          type: boolean
+        FrozenProtection:
+          type: boolean
+        Before10h30am:
+          type: boolean
+        DangerousGoods:
+          type: boolean
+        SNR:
+          type: boolean
         Page:
           type: integer
           format: int32
