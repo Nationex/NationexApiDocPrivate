@@ -3599,6 +3599,8 @@ components:
           type: number
           format: float
           description: "Weight of the parcel (lbs)"
+        Contact:
+          type: string
         Status:
           type: string
           enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender]
