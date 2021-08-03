@@ -3003,6 +3003,49 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Customers/search:
+    get:
+      tags:
+        - Customers
+      summary: 'Search customers'
+      description: 'Search customers with a query'
+      parameters:
+        - in: query
+          name: query
+          description: Name or address to search
+          required: true
+          example: Gatineau
+          schema:
+            type: string
+      security:
+        - BasicAuth: []
+      responses:
+        '200':
+          description: 'Ok'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DTOCustomer'
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Locations/{postalCode}:
     get:
       tags:
