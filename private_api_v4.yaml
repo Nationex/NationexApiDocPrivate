@@ -1377,7 +1377,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Users/{customerId}:
+  /Users:
     get:
       tags:
         - Users
@@ -1385,7 +1385,7 @@ paths:
       description: "Get user list"
       operationId: getUserList
       parameters:
-        - in: path
+        - in: query
           name: customerId
           description: Nationex Customer Id (5 or 6 digits)
           required: true
