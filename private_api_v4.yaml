@@ -5003,31 +5003,5 @@ SUVORK5CYII="
           type: string
           format: date-time
           example: "2021-03-31 13:31:00"
-    DTOCustomer:
-      description: "Nationex Customer"
-      type: object
-      properties:
-        CustomerId:
-          type: integer
-          format: int32
-          description: Nationex Customer Id (5 or 6 digits)
-          example: 10288
-          minimum: 10000
-          maximum: 999999
-        Name:
-          type: string
-          example: "Test 123"
-        Address:
-          type: string
-          example: "275 Rue Principale"
-        City:
-          type: string
-          example: "St-Sauveur"
-        PostalCode:
-          type: string
-          example: "J0R1R0"
-        Active:
-          type: boolean
-          example: true
 security:
     - BasicAuth: []
