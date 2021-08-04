@@ -3599,17 +3599,17 @@ components:
           type: number
           format: float
           example: 6.5
-          description: "Height of the box in inches"
+          description: "Height of the box in inches by default, can be changed in UnitsOfMeasurement for GetRates"
         Length:
           type: number
           format: float
           example: 12
-          description: "Length of the box in inches"
+          description: "Length of the box in inches by default, can be changed in UnitsOfMeasurement for GetRates"
         Width:
           type: number
           format: float
           example: 8
-          description: "Width of the box in inches"
+          description: "Width of the box in inches by default, can be changed in UnitsOfMeasurement for GetRates"
         Cubing:
           type: number
           format: float
@@ -4043,7 +4043,7 @@ components:
         TotalWeight:
             type: number
             format: float
-            description: Total weight of the shipment in pounds (lbs)
+            description: Total weight of the shipment in pounds (lbs) by default, can be changed in UnitsOfMeasurement for GetRates
             example: 12.20
         TotalParcels:
             type: integer
@@ -4391,7 +4391,7 @@ components:
           type: number
           format: float
           example: 15.5
-          description: "Weight of the parcel (only lbs supported). Maximum 99 lbs"
+          description: "Weight of the parcel in lbs by default, can be changed in UnitsOfMeasurement for GetRates. Maximum 99 lbs"
         Dimensions:
           $ref: '#/components/schemas/DTODimensions'
     DTOConsigneeCreated:
