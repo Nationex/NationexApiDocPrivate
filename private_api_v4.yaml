@@ -3293,7 +3293,7 @@ components:
           description: User Id
           example: 29109
         CustomerId:
-          type: string
+          type: integer
           description: Nationex Customer Id (5 or 6 digits) of the collect account
           example: 165556
         Username:
