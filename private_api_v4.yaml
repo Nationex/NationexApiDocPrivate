@@ -3285,6 +3285,8 @@ components:
         - Password
         - Email
         - CustomerId
+        - FirstName
+        - LastName
       properties:
         UserId:
           type: string
