@@ -4958,6 +4958,10 @@ SUVORK5CYII="
             type: string
             description: "API token to be used for authentication for future API calls"
             example: JFIEJ9382H2HH4KJSI98
+          WebUserId:
+            type: string
+            description: "Guid Id of the Web User"
+            example: 
           IsOldUser:
             type: boolean
             description: "If true, the username/password is from the old system and has to be replaced"
