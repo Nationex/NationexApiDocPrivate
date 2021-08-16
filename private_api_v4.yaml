@@ -3985,6 +3985,12 @@ components:
         IsInvoiced:
           type: boolean
           example: false
+        IsReturnToShipper:
+          type: boolean
+          example: false
+        IsCustomerInactive:
+          type: boolean
+          example: false
         CurrentRouteFr:
           type: string
           example: 50203 (Remis à 2021-08-01)
