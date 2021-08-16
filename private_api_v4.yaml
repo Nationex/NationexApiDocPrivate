@@ -3950,7 +3950,10 @@ components:
             $ref: '#/components/schemas/DTOPhoto'
           description: "Signatures and photos. Linked with the PhotoId's and SignatureId's from DTOParcelHistory"
         Stops:
-          description: "Stops of the entire route for the current day for the shipment"
+          description: "Stops of the entire route for the current day for the delivery of the shipment or previous day if already delivered"
+          $ref: '#/components/schemas/DTOStops'
+        PickupStops:
+          description: "Stops of the entire route for the current day for the pickup of the shipment or previous day if already picked up"
           $ref: '#/components/schemas/DTOStops'
         StopHistory:
           description: "History of stops for the shipment"
