@@ -4030,11 +4030,11 @@ components:
         SenderHistory:
           type: array
           items:
-            $ref: '#/components/schemas/DTOSender'
+            $ref: '#/components/schemas/DTOAddressHistory'
         DestinationHistory:
           type: array
           items:
-            $ref: '#/components/schemas/DTODestination'
+            $ref: '#/components/schemas/DTOAddressHistory'
     DTOShipmentCreate:
       type: object
       description: "Request object to create a shipment. For a Delivery and PickupDelivery type, Destination is required. For a PickupReturn and PickupDelivery type, Sender is required. Otherwise it is the customer's address by default"
@@ -5122,5 +5122,40 @@ SUVORK5CYII="
           type: string
           format: date-time
           example: "2021-03-31 13:31:00"
+    DTOAddressHistory:
+      description: "Full address list when an address was changed"
+      type: object
+      properties:
+        PostalCode:
+          type: string
+          example: "K7L4V3"
+        PostalCodeRouteId:
+          type: integer
+          example: 50311
+        AccountName:
+          type: string
+          example: "INDIGO"
+        Address1:
+          type: string
+          example: "15 SUNSET LANE"
+        Address2:
+          type: string
+          example: ""
+        City:
+          type: string
+          example: "KINGSTON"
+        Phone:
+          type: string
+          example: "4165955735"
+        HistoryDate:
+          type: string
+          format: date-time
+          example: "2021-08-16 10:48:57"
+        UserId:
+          type: integer
+          example: 10250
+        UserFullName:
+          type: string
+          example: "Jessica	Piveteau"
 security:
     - BasicAuth: []
