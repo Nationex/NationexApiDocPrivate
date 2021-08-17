@@ -5072,7 +5072,7 @@ SUVORK5CYII="
             example: JFIEJ9382H2HH4KJSI98
           ContactId:
             type: string
-            description: "Guid Id of the Contact"
+            description: "Guid Id of the Contact in Nationex CRM"
             example: "6fe18e8e-7bff-eb11-94f0-0022483c1f88"
           IsOldUser:
             type: boolean
