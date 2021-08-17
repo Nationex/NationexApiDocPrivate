@@ -5073,7 +5073,6 @@ SUVORK5CYII="
           ContactId:
             type: string
             description: "Guid Id of the Contact"
-            example: 
           IsOldUser:
             type: boolean
             description: "If true, the username/password is from the old system and has to be replaced"
