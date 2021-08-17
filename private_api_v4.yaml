@@ -3528,24 +3528,39 @@ components:
           description: Consignee name
           example: Coffee Shop
           maxLength: 40
+        AccountNameChanged:
+          type: boolean
+          example: false
         Address1:
           type: string
           description: First part of address, includes street number and street name
           example: 433 Apple street
           maxLength: 35
+        Address1Changed:
+          type: boolean
+          example: false
         Address2:
           type: string
           description: Second part of address, optional
           example: 3rd floor
           maxLength: 35
+        Address2Changed:
+          type: boolean
+          example: false
         PostalCode:
           type: string
           example: H2H2S2
           maxLength: 6
+        PostalCodeChanged:
+          type: boolean
+          example: false
         City:
           type: string
           example: Montreal
           maxLength: 35
+        CityChanged:
+          type: boolean
+          example: false
         ProvinceState:
           type: string
           example: QC
@@ -3785,24 +3800,39 @@ components:
           description: Consignee name
           example: Coffee Shop
           maxLength: 40
+        AccountNameChanged:
+          type: boolean
+          example: false
         Address1:
           type: string
           description: First part of address, includes street number and street name
           example: 433 Apple street
           maxLength: 35
+        Address1Changed:
+          type: boolean
+          example: false
         Address2:
           type: string
           description: Second part of address, optional
           example: 3rd floor
           maxLength: 35
+        Address2Changed:
+          type: boolean
+          example: false
         PostalCode:
           type: string
           example: H2H2S2
           maxLength: 6
+        PostalCodeChanged:
+          type: boolean
+          example: false
         City:
           type: string
           example: Montreal
           maxLength: 35
+        CityChanged:
+          type: boolean
+          example: false
         ProvinceState:
           type: string
           example: QC
@@ -3997,6 +4027,14 @@ components:
         CurrentRouteEn:
           type: string
           example: 50203 (Postponed to 2021-08-01)
+        SenderHistory:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOSender'
+        DestinationHistory:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTODestination'
     DTOShipmentCreate:
       type: object
       description: "Request object to create a shipment. For a Delivery and PickupDelivery type, Destination is required. For a PickupReturn and PickupDelivery type, Sender is required. Otherwise it is the customer's address by default"
