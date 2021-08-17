@@ -4723,7 +4723,7 @@ components:
         ShipmentType:
           type: string
           enum: [Delivery, PickupReturn, PickupDelivery]
-          description: "Shipment type, if null it will return all types".
+          description: "Shipment type, if null it will return all types"
         ExpDate:
           type: string
           format: date
