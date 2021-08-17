@@ -5070,9 +5070,9 @@ SUVORK5CYII="
             type: string
             description: "API token to be used for authentication for future API calls"
             example: JFIEJ9382H2HH4KJSI98
-          WebUserId:
+          ContactId:
             type: string
-            description: "Guid Id of the Web User"
+            description: "Guid Id of the Contact"
             example: 
           IsOldUser:
             type: boolean
