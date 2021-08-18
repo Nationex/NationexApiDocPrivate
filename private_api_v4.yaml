@@ -3466,6 +3466,15 @@ components:
           description: 'Id of the signature image, found in DTOShipment'
         Geocoding:
           $ref: '#/components/schemas/DTOGeocoding'
+        Dimensions:
+          $ref: '#/components/schemas/DTODimensions'
+        Weight:
+          type: number
+          format: float
+          description: "Weight of the parcel (lbs)"
+        Chute:
+          type: integer
+          example: 16
     DTOAccessory:
       type: object
       properties:
