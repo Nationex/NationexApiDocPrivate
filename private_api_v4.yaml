@@ -3507,12 +3507,11 @@ components:
           type: string
         VisitCode:
           type: integer
+          format: int32
         SourceType:
           type: integer
+          format: int32
         PostponedDate:
-          type: string
-          format: date-time
-        InsertDate:
           type: string
           format: date-time
     DTOAccessory:
