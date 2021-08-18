@@ -4990,26 +4990,6 @@ SUVORK5CYII="
           PostponedDate:
             type: string
             format: date-time
-          Weight:
-            type: number
-            description: weight in lbs
-            example: 12.4
-          Height:
-            type: number
-            description: Height in inches
-            example: 6.4
-          Width:
-            type: number
-            description: Width in inches
-            example: 12.1
-          Length:
-            type: number
-            description: Length in inches
-            example: 12.1
-          Cubing:
-            type: number
-            description: Weight corrected for volume
-            example: 17.17
     DTOException:
       type: object
       description: "Exception code corresponding to parcel histories"
