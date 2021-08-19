@@ -296,6 +296,13 @@ paths:
           required: false
           schema:
             type: string
+        - name: reactivate
+          in: query
+          description: (Optional) Reactivates the shipment if true.
+          example: false
+          required: false
+          schema:
+            type: boolean
       requestBody:
           description: "shipment info"
           required: true
