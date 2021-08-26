@@ -3719,6 +3719,10 @@ components:
           type: string
           description: "Customer note"
           example: "Déménagé/Moved"
+        EconomaxBalance:
+          type: number
+          description: "Customer's balance for Nationex website"
+          example: "155.23"
     DTODimensions:
       type: object
       properties:
