@@ -1128,7 +1128,7 @@ paths:
                 code: 500
                 message: "Internal server error"
   /Users/validatePassword:
-    get:
+    post:
       tags:
         - Users
       summary: 'Validate Password'
@@ -5148,13 +5148,18 @@ SUVORK5CYII="
       description: "Login response"
       type: object
       properties:
-          CustomerId:
-            type: integer
-            example: 113300
-          WebUserApiToken:
-            type: string
-            description: "API token to be used for authentication for future API calls"
-            example: JFIEJ9382H2HH4KJSI98
+          ApiTokens:
+            type: array
+            items:
+              type: object
+              properties:
+                CustomerId:
+                  type: integer
+                  example: 113300
+                WebUserApiToken:
+                  type: string
+                  description: "API token to be used for authentication for future API calls"
+                  example: JFIEJ9382H2HH4KJSI98
           ContactGuidId:
             type: string
             description: "Guid Id of the Contact in Nationex CRM"
