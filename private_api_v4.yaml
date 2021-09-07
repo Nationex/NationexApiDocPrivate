@@ -1088,13 +1088,13 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Users/emailAvailable:
+  /Users/validateEmail:
     get:
       tags:
         - Users
-      summary: 'Email Available'
-      description: 'Checks if email is available or already used'
-      operationId: emailAvailable
+      summary: 'Validate Email'
+      description: 'Checks if email already exists for this account or other accounts'
+      operationId: validateEmail
       parameters:
         - name: email
           in: query
@@ -1102,6 +1102,45 @@ paths:
           required: true
           schema:
             type: string
+      security: [] # no authentication
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: string
+                enum: [AlreadyTaken, ExistsOtherAccount, DoesNotExist]
+                example: DoesNotExist
+                default: DoesNotExist
+                description: If AlreadyTaken, we can't create this user because it already exists. If ExistsOtherAccount, the user should confirm his password and the new user will have the same password. If DoesNotExist, the email is available and the user will be created with the chosen password.
+              examples:
+                String Response:
+                  value:
+                    DoesNotExist
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Users/validatePassword:
+    get:
+      tags:
+        - Users
+      summary: 'Validate Password'
+      description: 'Checks if password is valid. Same as Login but the response is different.'
+      operationId: validatePassword
+      requestBody:
+        description: A JSON object containing the email and password
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DTOLoginRequest'
       security: [] # no authentication
       responses:
         '200':
