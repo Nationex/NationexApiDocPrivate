@@ -1102,6 +1102,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: customerId
+          in: query
+          example: 113300
+          required: true
+          schema:
+            type: integer
       security: [] # no authentication
       responses:
         '200':
