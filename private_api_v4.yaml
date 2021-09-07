@@ -5151,15 +5151,7 @@ SUVORK5CYII="
           ApiTokens:
             type: array
             items:
-              type: object
-              properties:
-                CustomerId:
-                  type: integer
-                  example: 113300
-                WebUserApiToken:
-                  type: string
-                  description: "API token to be used for authentication for future API calls"
-                  example: JFIEJ9382H2HH4KJSI98
+              $ref: '#/components/schemas/DTOLoginResponseApiToken'
           ContactGuidId:
             type: string
             description: "Guid Id of the Contact in Nationex CRM"
@@ -5168,6 +5160,17 @@ SUVORK5CYII="
             type: boolean
             description: "If true, the username/password is from the old system and has to be replaced"
             example: false
+    DTOLoginResponseApiToken:
+      description: "Login response api toke "
+      type: object
+      properties:
+        CustomerId:
+          type: integer
+          example: 113300
+        WebUserApiToken:
+          type: string
+          description: "API token to be used for authentication for future API calls"
+          example: JFIEJ9382H2HH4KJSI98
     DTOPODContact:
       description: "Contact name and email to send a POD"
       type: object
