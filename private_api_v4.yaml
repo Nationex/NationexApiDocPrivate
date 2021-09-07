@@ -1132,7 +1132,7 @@ paths:
       tags:
         - Users
       summary: 'Validate Password'
-      description: 'Checks if password is valid. Same as Login but the response is different.'
+      description: 'Checks if password is valid. Same as Login but boolean response instead of object.'
       operationId: validatePassword
       requestBody:
         description: A JSON object containing the email and password
