@@ -5358,7 +5358,7 @@ SUVORK5CYII="
         PriceList:
           type: array
           items:
-            $ref: '#/components/schemas/DTOLoginResponseApiToken'
+            $ref: '#/components/schemas/EconomaxPackagePrice'
     EconomaxPackagePrice:
       description: "Prices for economax customers"
       type: object
