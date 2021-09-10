@@ -5338,23 +5338,31 @@ SUVORK5CYII="
       properties:
         PackageId:
           type: integer
-          example: 1
+          example: 101
         DescriptionFr:
           type: string
+          example: "ECONOMAX 500"
         DescriptionEn:
           type: string
+          example: "ECONOMAX 500"
         Amount:
           type: number
+          example: 500.0
         ZoneID:
           type: integer
+          example: 0
         GST:
           type: number
+          example: 25.0
         PST:
           type: number
+          example: 49.88
         HST:
           type: number
+          example: 25.0
         BankMin:
           type: number
+          example: 50
         PriceList:
           type: array
           items:
@@ -5365,16 +5373,20 @@ SUVORK5CYII="
       properties:
         PackageId:
           type: integer
-          example: 1
+          example: 101
         OriginZoneId:
           type: integer
+          example: 1
         OriginZone:
           type: string
         DestinationZone:
           type: string
+          example: "AB"
         FirstParcelPrice:
           type: number
+          example: 58.47
         AddParcelPrice:
           type: number
+          example: 31.29
 security:
     - BasicAuth: []
