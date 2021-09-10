@@ -5280,5 +5280,49 @@ SUVORK5CYII="
         StatusDate:
           type: string
           format: date-time
+    DTOEconomaxPackage:
+      description: "Prices for economax customers"
+      type: object
+      properties:
+        PackageId:
+          type: integer
+          example: 1
+        DescriptionFr:
+          type: string
+        DescriptionEn:
+          type: string
+        Amount:
+          type: number
+        ZoneID:
+          type: integer
+        GST:
+          type: number
+        PST:
+          type: number
+        HST:
+          type: number
+        BankMin:
+          type: number
+        PriceList:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOLoginResponseApiToken'
+    EconomaxPackagePrice:
+      description: "Prices for economax customers"
+      type: object
+      properties:
+        PackageId:
+          type: integer
+          example: 1
+        OriginZoneId:
+          type: integer
+        OriginZone:
+          type: string
+        DestinationZone:
+          type: string
+        FirstParcelPrice:
+          type: number
+        AddParcelPrice:
+          type: number
 security:
     - BasicAuth: []
