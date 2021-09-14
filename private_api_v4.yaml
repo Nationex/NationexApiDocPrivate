@@ -4036,6 +4036,22 @@ components:
           type: integer
           example: 53404
           description: "Route Id associated to the sender"
+        RoutePhone:
+          type: string
+          example: 392-3904-2948
+          description: "Phone of the driver associated to the Route Id"
+        SectorPhone:
+          type: string
+          example: 392-3904-2948
+          description: "Phone of the broker associated to the Sector Id"
+        RouteName:
+          type: string
+          example: 392-3904-2948
+          description: "Name of the driver associated to the Route Id"
+        SectorName:
+          type: string
+          example: 392-3904-2948
+          description: "Name of the broker associated to the Sector Id"
     DTOShipment:
       type: object
       required:
