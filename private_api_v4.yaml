@@ -4919,7 +4919,7 @@ components:
         Reference:
           type: string
           description: "Shipment's reference"
-          maxLength: 15
+          maxLength: 50
         ShipmentType:
           type: string
           enum: [Delivery, PickupReturn, PickupDelivery]
