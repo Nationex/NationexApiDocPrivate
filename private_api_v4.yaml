@@ -5368,6 +5368,9 @@ SUVORK5CYII="
         StatusDate:
           type: string
           format: date-time
+        LastLocation:
+          type: string
+          example: St-Hubert
     DTOEconomaxPackage:
       description: "Prices for economax customers"
       type: object
