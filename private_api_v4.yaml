@@ -4486,6 +4486,10 @@ components:
           description: No signature required if true
           example: false
           default: false
+        Active:
+          type: boolean
+          default: true
+          description: Non-permanent way to delete a consignee is to set Active = false
     DTOEconomaxPackageRenewal:
       type: object
       required:
