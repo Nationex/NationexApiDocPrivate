@@ -2976,7 +2976,7 @@ paths:
                 $ref: '#/components/responses/NotFound'
               example: 
                 code: 404
-                message: "CustomerId 10288 does not have rates"
+                message: "CustomerId '10288' does not have rates"
         '500':
           description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
