@@ -1362,7 +1362,7 @@ paths:
       parameters:
         - name: username
           in: path
-          description: Username of the user
+          description: ID of the user
           required: true
           example: 1038
           schema:
