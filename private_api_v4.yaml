@@ -1146,7 +1146,7 @@ paths:
         content: 
           application/json:
             schema:
-              $ref: '#/components/schemas/DTOLoginRequest'
+              $ref: '#/components/schemas/DTOValidatePassword'
       security: [] # no authentication
       responses:
         '200':
@@ -5244,6 +5244,20 @@ SUVORK5CYII="
         username:
           type: string
           description: User's username
+          example: user123
+        password:
+          type: string
+          description: User's password
+          example: Password123
+    DTOValidatePassword:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          description: User's email
           example: user123
         password:
           type: string
