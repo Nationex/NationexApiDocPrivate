@@ -1352,7 +1352,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Users/{id}/changePassword:
+  /Users/{username}/changePassword:
     post:
       tags:
         - Users
@@ -1360,9 +1360,9 @@ paths:
       description: 'Change a user''s password'
       operationId: changePassword
       parameters:
-        - name: id
+        - name: username
           in: path
-          description: ID of the user
+          description: Username of the user
           required: true
           example: 1038
           schema:
@@ -4895,12 +4895,8 @@ components:
       type: object
       description: "Change password request info"
       required:
-        - UserId
         - NewPassword
       properties:
-        UserId:
-          type: string
-          example: 8392
         NewPassword:
           type: string
           example: lawow90imldkf
