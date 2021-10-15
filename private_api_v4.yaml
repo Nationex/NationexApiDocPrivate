@@ -5280,12 +5280,16 @@ SUVORK5CYII="
             description: "If true, the username/password is from the old system and has to be replaced"
             example: false
     DTOLoginResponseApiToken:
-      description: "Login response api toke "
+      description: "Login response api token"
       type: object
       properties:
         CustomerId:
           type: integer
           example: 113300
+        CustomerGuidId:
+          type: string
+          description: GuidId from the CRM
+          example: "5c6b304a-b8e2-eb11-bacb-000d3ae8d0e0"
         WebUserApiToken:
           type: string
           description: "API token to be used for authentication for future API calls"
