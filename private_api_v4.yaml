@@ -3425,8 +3425,9 @@ components:
       type: object
       required:
         - ShipmentId
-        - PostalCode
-        - NoteEnd
+        - NoCivic
+        - Email
+        - Phone
       properties:
         ShipmentId:
           type: string
@@ -3434,15 +3435,15 @@ components:
           example: 501293849
         NoCivic:
           type: string
-          description: 'Civic Number of the shipment'
+          description: 'Civic Number of the shipment.'
           example: 130
         Email:
           type: string
-          description: 'Consignee Email'
+          description: 'Consignee Email. If consignee doesn''t have email leave empty'
           example: test@test.com
         Phone:
           type: string
-          description: 'Consignee Phone'
+          description: 'Consignee Phone. If consignee doesn''t have phone leave empty'
           example: "4382938449"
     DTOUser:
       type: object
