@@ -3918,6 +3918,21 @@ components:
           format: date
           description: 'Live estimated date of delivery'
           example: '2021-04-16'
+        EstimatedDeliveryDateTimeStart:
+          type: string
+          format: date-time
+          description: 'Live estimated time of delivery (only available during day of delivery), minimum of margin of error'
+          example: '2021-10-27T13:00:00Z'
+        EstimatedDeliveryDateTimeEnd:
+          type: string
+          format: date-time
+          description: 'Live estimated time of delivery (only available during day of delivery), maximum of margin of error'
+          example: '2021-10-27T16:00:00Z'
+        EstimatedDeliveryDateTimeExact:
+          type: string
+          format: date-time
+          description: 'Live estimated time of delivery (only available during day of delivery), does not include margin of error'
+          example: '2021-10-27T16:00:00Z'
         EstimatedDeliveryTime:
           type: string
           description: 'Live estimated time of delivery (only available during day of delivery), does not include margin of error'
