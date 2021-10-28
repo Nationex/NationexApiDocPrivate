@@ -3949,6 +3949,10 @@ components:
           type: integer
           description: 'Estimated percentage of delivery, 100 when delivered'
           example: 88
+        EstimatedDeliveryWithin3Hours:
+          boolean:
+          example: false
+          description: 'True when estimated delivery is 3 hours from now'
         Dimensions:
           $ref: '#/components/schemas/DTODimensions'
         History:
