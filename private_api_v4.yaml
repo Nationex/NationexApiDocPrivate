@@ -3950,9 +3950,9 @@ components:
           description: 'Estimated percentage of delivery, 100 when delivered'
           example: 88
         EstimatedDeliveryWithin3Hours:
-          boolean:
+          type: boolean
           example: false
-          description: 'True when estimated delivery is 3 hours from now'
+          description: 'True when estimated delivery is 3 hours from now. False after delivered.'
         Dimensions:
           $ref: '#/components/schemas/DTODimensions'
         History:
