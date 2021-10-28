@@ -3952,6 +3952,7 @@ components:
         EstimatedDeliveryWithin3Hours:
           type: boolean
           example: false
+          default: false
           description: 'True when estimated delivery is 3 hours from now. False after delivered.'
         Dimensions:
           $ref: '#/components/schemas/DTODimensions'
