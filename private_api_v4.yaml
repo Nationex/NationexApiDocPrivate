@@ -4152,11 +4152,11 @@ components:
           type: string
           description: "Readable ShipmentStatus in english"
           example: "Data received"
-        ShipmentTooltipFr:
+        ShipmentStatusTooltipFr:
           type: string
           description: "Long format ShipmentStatus in french"
           example: "Votre commande a été reçue à notre centre de tri et est maintenant en transit dans notre réseau. Vous serez notifié lorsqu'elle sera en route vers sa destination finale."
-        ShipmentTooltipEn:
+        ShipmentStatusTooltipEn:
           type: string
           description: "Long format ShipmentStatus in english"
           example: "Your order has been received at our sorting center and is now in transit in our network. You will be notified when it is on its way to its final destination."
