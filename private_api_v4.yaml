@@ -4152,6 +4152,14 @@ components:
           type: string
           description: "Readable ShipmentStatus in english"
           example: "Data received"
+        ShipmentTooltipFr:
+          type: string
+          description: "Readable ShipmentStatus in french"
+          example: "Données reçues"
+        ShipmentTooltipEn:
+          type: string
+          description: "Readable ShipmentStatus in english"
+          example: "Data received"
         StatusHistories:
           type: array
           items:
