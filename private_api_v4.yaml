@@ -4240,6 +4240,9 @@ components:
         IsInvoiced:
           type: boolean
           example: false
+        IsScanned:
+          type: boolean
+          example: false
         IsReturnToShipper:
           type: boolean
           example: false
