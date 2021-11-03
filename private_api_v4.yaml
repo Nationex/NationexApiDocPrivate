@@ -4365,6 +4365,11 @@ components:
           items:
             type: string
           example: [501883938010, 501883938027]
+        PickupDate:
+          description: Date of scheduled pickup by Nationex
+          type: string
+          format: date
+          example : '2021-11-04'
         RatesDetail:
           $ref: '#/components/schemas/DTORatesDetail'
     DTOShipmentRatesRequest:
