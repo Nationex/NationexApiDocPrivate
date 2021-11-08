@@ -4372,6 +4372,14 @@ components:
           example : '2021-11-04'
         RatesDetail:
           $ref: '#/components/schemas/DTORatesDetail'
+        DestDepot:
+          description: Depot name abbreviation to print on custom labels
+          type: string
+          example: 'STH'
+        DestRoute:
+          description: Nationex Route ID to print on custom labels
+          type: integer
+          example: 53003
     DTOShipmentRatesRequest:
       type: object
       required:
