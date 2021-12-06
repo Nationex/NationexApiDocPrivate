@@ -4251,6 +4251,7 @@ components:
           example: false
         IsConsolidated:
           type: boolean
+          description: 'Indicates if the shipment has other shipments consolidated with it'
           example: false
         CurrentRouteFr:
           type: string
