@@ -4219,6 +4219,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/DTOException'
+        ConsolShipmentIds:
+          type: array
+          description: 'When the shipment is consolidated, this includes all shipment ids'
+          items:
+            type: number
         CustomerNote:
           type: string
           example: "DEMENAGE"
