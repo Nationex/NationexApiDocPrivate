@@ -4258,6 +4258,10 @@ components:
           type: boolean
           description: 'Indicates if the shipment has other shipments consolidated with it'
           example: false
+        IsPickup:
+          type: boolean
+          description: 'Is a Pickup+Return or Pickup+Delivery and the pickup has not been done yet'
+          example: false
         CurrentRouteFr:
           type: string
           example: 50203 (Remis à 2021-08-01)
