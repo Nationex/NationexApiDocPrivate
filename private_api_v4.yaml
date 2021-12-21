@@ -5562,13 +5562,10 @@ SUVORK5CYII="
       description: "Tooltips to display on the website"
       type: object
       properties:
-        TextFr:
+        ShipmentStatus:
           type: string
-          example: 'Une situation inattendue nous empêche de compléter votre livraison aujourd'hui.
-Soyez sans crainte, nous faisons tout pour y remédier, vous recevrez un avis lorsque votre commande sera remise en livraison.'
-        TextEn:
-          type: string
-          example: 'An unexpected situation prevents us from completing your delivery today.
-Don't worry, we are doing everything we can to remedy the situation, you will receive a notification when your order is reshipped.'
+          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
+          description: "Global status of the entire shipment"
+          example: 'DataReceived'
 security:
     - BasicAuth: []
