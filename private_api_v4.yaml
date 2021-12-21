@@ -4204,6 +4204,10 @@ components:
           type: string
           description: "Long format ShipmentStatus in english"
           example: "Your order has been received at our sorting center and is now in transit in our network. You will be notified when it is on its way to its final destination."
+        ShipmentStatusTooltips:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOTooltip'
         StatusHistories:
           type: array
           items:
@@ -5554,5 +5558,17 @@ SUVORK5CYII="
         AddParcelPrice:
           type: number
           example: 31.29
+    DTOTooltip:
+      description: "Tooltips to display on the website"
+      type: object
+      properties:
+        TextFr:
+          type: string
+          example: 'Une situation inattendue nous empêche de compléter votre livraison aujourd'hui.
+Soyez sans crainte, nous faisons tout pour y remédier, vous recevrez un avis lorsque votre commande sera remise en livraison.'
+        TextEn:
+          type: string
+          example: 'An unexpected situation prevents us from completing your delivery today.
+Don't worry, we are doing everything we can to remedy the situation, you will receive a notification when your order is reshipped.'
 security:
     - BasicAuth: []
