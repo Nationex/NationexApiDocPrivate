@@ -3428,6 +3428,71 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Partners/insertEvent:
+    post:
+      tags:
+        - Partners
+      summary: 'Insert Event'
+      description: 'Insert an even for parcels, can include signatures, pictures. Nationex partner api key required.'
+      security:
+        - BasicAuth: []
+      requestBody:
+          description: Event to insert
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOEvent'
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '400':
+          description: 'InvalidInput: ParcelIds is required'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InvalidInput'
+              example: 
+                code: 400
+                message: "ParcelIds is required"
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ParcelId 50139943201"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
 components:
   securitySchemes:
     BasicAuth:     # <-- arbitrary name for the security scheme
