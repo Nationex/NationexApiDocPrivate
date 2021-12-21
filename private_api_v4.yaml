@@ -1234,7 +1234,7 @@ paths:
        - Users
      summary: 'Get User'
      description: "Get user"
-     operationId: getUserName
+     operationId: getUser
      parameters:
        - in: path
          name: id
