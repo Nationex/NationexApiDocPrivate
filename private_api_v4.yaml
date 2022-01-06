@@ -5846,7 +5846,7 @@ SUVORK5CYII="
           type: string
           description: 'Name of the person creating the case'
           example: 'Chad Coconut'
-        file:
+        attachment:
           type: string
           format: byte
           description: attachment
