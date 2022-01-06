@@ -5822,5 +5822,9 @@ SUVORK5CYII="
         gs_subcategoryid:
           type: string
           example: 'Autre'
+        primarycontactid:
+          type: string
+          description: 'Contact Id of the person creating the ticket'
+          example: '8cf866ee-9727-ec11-b6e6-0022483cbecc'
 security:
     - BasicAuth: []
