@@ -5725,5 +5725,55 @@ SUVORK5CYII="
         Reason:
           type: string
           example: 'No answer'
+    DTOCase:
+      type: object
+      description: 'Case for crm'
+      properties:
+        gs_waybillnumber:
+          type: integer
+          format: int32
+          description: '9 digit shipmentId'
+          example: 103448596
+        gs_invoicenumber:
+          type: integer
+          format: int32
+          description: 'InvoiceId'
+          example: 1341543
+        gs_additionalinfo:
+          type: string
+          description: 'Description of the case'
+          example: 'Never received the parcel'
+        gs_reference:
+          type: string
+          description: 'Shipment reference'
+          example: 'RYX29388'
+        gs_claimamount:
+          type: number
+          description: 'Claim amount'
+        gs_isinsured:
+          type: boolean
+          description: 'Is Insured'
+        gs_equipment:
+          type: string
+          description: 'Equipment'
+        gs_thermalprinterlabelqty:
+          type: integer
+          format: int32
+          description: 'Thermal printer labels quantity requested'
+        gs_clearpocketqty:
+          type: integer
+          format: int32
+          description: 'Clear pocket quantity requested'
+        gs_enveloppeqty:
+          type: integer
+          format: int32
+          description: 'Enveloppe quantity requested'
+        gs_dateofreceipt:
+          type: string
+          format: date
+          example: "2022-01-06"
+        gs_subcategoryid:
+          type: string
+          example: 'Autre'
 security:
     - BasicAuth: []
