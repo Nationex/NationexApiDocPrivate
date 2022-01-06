@@ -5776,6 +5776,14 @@ SUVORK5CYII="
       type: object
       description: 'Case for crm'
       properties:
+        title:
+          type: string
+          description: 'Title of the case'
+          example: 'Parcel 10344859601 not received'
+        description:
+          type: string
+          description: 'Description of the case'
+          example: 'Never received the parcel'
         gs_waybillnumber:
           type: integer
           format: int32
@@ -5838,14 +5846,6 @@ SUVORK5CYII="
           type: string
           description: 'Name of the person creating the case'
           example: 'Chad Coconut'
-        title:
-          type: string
-          description: 'Title of the case'
-          example: 'Parcel 10344859601 not received'
-        description:
-          type: string
-          description: 'Description of the case'
-          example: 'Never received the parcel'
         file:
           type: string
           format: byte
