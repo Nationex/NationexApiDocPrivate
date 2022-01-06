@@ -5788,8 +5788,8 @@ SUVORK5CYII="
           example: 1341543
         gs_additionalinfo:
           type: string
-          description: 'Description of the case'
-          example: 'Never received the parcel'
+          description: 'Additionnal info of the case'
+          example: 'I will be right be in 2 weeks'
         gs_reference:
           type: string
           description: 'Shipment reference'
@@ -5824,8 +5824,28 @@ SUVORK5CYII="
           example: 'Autre'
         primarycontactid:
           type: string
-          description: 'Contact Id of the person creating the ticket'
+          description: 'Contact Id of the person creating the case if logged in'
           example: '8cf866ee-9727-ec11-b6e6-0022483cbecc'
+        gs_phonenumber:
+          type: string
+          description: 'Phone number of the person creating the case'
+          example: '438-228-3394'
+        gs_email:
+          type: string
+          description: 'Email of the person creating the case'
+          example: 'test@gmail.com'
+        gs_recipient:
+          type: string
+          description: 'Name of the person creating the case'
+          example: 'Chad Coconut'
+        title:
+          type: string
+          description: 'Title of the case'
+          example: 'Parcel 10344859601 not received'
+        description:
+          type: string
+          description: 'Description of the case'
+          example: 'Never received the parcel'
         file:
           type: string
           format: byte
