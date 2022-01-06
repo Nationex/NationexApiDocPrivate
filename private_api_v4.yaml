@@ -3493,6 +3493,53 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Case:
+    post:
+      tags:
+        - Case
+      summary: 'Create case'
+      description: 'Create a new case'
+      security:
+        - BasicAuth: []
+      requestBody:
+          description: Case to create
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOCase'
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '500':
+          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
 components:
   securitySchemes:
     BasicAuth:     # <-- arbitrary name for the security scheme
