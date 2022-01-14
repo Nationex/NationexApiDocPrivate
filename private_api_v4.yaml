@@ -5797,7 +5797,7 @@ SUVORK5CYII="
         gs_additionalinfo:
           type: string
           description: 'Additionnal info of the case'
-          example: 'I will be right be in 2 weeks'
+          example: 'I will be right back in 2 weeks'
         gs_reference:
           type: string
           description: 'Shipment reference'
