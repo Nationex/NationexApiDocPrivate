@@ -5848,6 +5848,13 @@ SUVORK5CYII="
           type: string
           description: 'Title of the case'
           example: 'Parcel 10344859601 not received'
+        parcel_ids:
+          type: array
+          items:
+            type: integer
+            format: int64
+            description: 'Nationex Id of the parcel. 11 digits (9 digit shipmentId followed by 2 digit parcel number)'
+            example: 10344859601
         description:
           type: string
           description: 'Description of the case'
@@ -5944,5 +5951,13 @@ AAECYmMDBAgQIJALiE1O7AABAgQIiI0NECBAgEAuIDY5sQMECBAgIDY2QIAAAQK5gNjkxA4QIECA
 gNjYAAECBAjkAmKTEztAgAABAmJjAwQIECCQC4hNTuwAAQIECIiNDRAgQIBALiA2ObEDBAgQICA2
 NkCAAAECuYDY5MQOECBAgIDY2AABAgQI5AJikxM7QIAAAQJiYwMECBAgkAs8wZUAgqa0VWgAAAAA
 SUVORK5CYII="
+        attachment2:
+          type: string
+          format: byte
+          description: attachment 2
+        attachment3:
+          type: string
+          format: byte
+          description: attachment 3
 security:
     - BasicAuth: []
