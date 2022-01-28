@@ -3543,7 +3543,7 @@ paths:
   /Lead:
     post:
       tags:
-        - Case
+        - Lead
       summary: 'Create a lead'
       description: 'Create a new lead'
       security:
