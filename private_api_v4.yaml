@@ -5959,5 +5959,31 @@ SUVORK5CYII="
           type: string
           format: byte
           description: attachment 3
+    DTOLead:
+      type: object
+      description: 'Lead for crm'
+      properties:
+        description:
+          type: string
+          description: 'Description of the lead'
+          example: 'New potential customer'
+        customerid:
+          type: integer
+          description: 'Nationex Customer Id'
+        gs_categoryid:
+          type: string
+          example: 'Autre'
+        gs_phonenumber:
+          type: string
+          description: 'Phone number of the person creating the case'
+          example: '438-228-3394'
+        gs_email:
+          type: string
+          description: 'Email of the person creating the case'
+          example: 'test@gmail.com'
+        gs_recipient:
+          type: string
+          description: 'Name of the person creating the case'
+          example: 'Chad Coconut'
 security:
     - BasicAuth: []
