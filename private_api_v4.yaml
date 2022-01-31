@@ -6016,7 +6016,7 @@ SUVORK5CYII="
           example: 'New potential customer'
         customerid:
           type: string
-          description: 'Nationex Customer Id'
+          description: 'Nationex Customer Name (not actually related to CustomerId, the field was misnamed)'
           example: 'Scrap mobile'
         gs_categoryid:
           type: string
