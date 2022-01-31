@@ -6015,8 +6015,9 @@ SUVORK5CYII="
           description: 'Description of the lead'
           example: 'New potential customer'
         customerid:
-          type: integer
+          type: string
           description: 'Nationex Customer Id'
+          example: 'Scrap mobile'
         gs_categoryid:
           type: string
           example: 'Autre'
