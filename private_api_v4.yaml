@@ -6010,28 +6010,49 @@ SUVORK5CYII="
       type: object
       description: 'Lead for crm'
       properties:
-        description:
+        companyname:
           type: string
-          description: 'Description of the lead'
-          example: 'New potential customer'
-        customerid:
-          type: string
-          description: 'Nationex Customer Name (not actually related to CustomerId, the field was misnamed)'
+          description: 'Name of the company'
           example: 'Scrap mobile'
-        gs_categoryid:
+        address1_line1:
           type: string
-          example: 'Autre'
-        gs_phonenumber:
+          description: 'Company address line 1'
+          example: '288 Rue St-Jacques'
+        address1_city:
           type: string
-          description: 'Phone number of the person creating the case'
-          example: '438-228-3394'
-        gs_email:
+          description: 'Company address city'
+          example: 'Montreal'
+        address1_stateorprovince:
           type: string
-          description: 'Email of the person creating the case'
-          example: 'test@gmail.com'
-        gs_recipient:
+          description: 'Company province'
+          example: 'Quebec'
+        address1_postalcode:
           type: string
-          description: 'Name of the person creating the case'
-          example: 'Chad Coconut'
+          description: 'Company postal code'
+          example: 'H4S2S2'
+        lv1_shippinglocation:
+          type: string
+          description: 'Primary shipping destination'
+          example: 'Quebec city'
+        lv1_numberofpackagesperday:
+          type: integer
+          description: 'Number of packages shipped per day'
+          example: 50
+        firstname:
+          type: string
+          description: 'First name of the contact'
+          example: 'Leeroy'
+        lastname:
+          type: string
+          description: 'Last name of the contact'
+          example: 'Jenkins'
+        emailaddress1:
+          type: string
+          description: 'Email of the contact'
+          example: 'testemail@gmail.com'
+        mobilephone:
+          type: string
+          description: 'Phone of the contact'
+          example: '514-514-5144'
 security:
     - BasicAuth: []
