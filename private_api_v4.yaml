@@ -6031,9 +6031,12 @@ SUVORK5CYII="
           description: 'Company postal code'
           example: 'H4S2S2'
         lv1_shippinglocation:
-          type: string
-          description: 'Primary shipping destination'
-          example: 'Quebec city'
+          type: array
+          items:
+            type: string
+            enum: [quebec, ontario, canadawest, canadaeast]
+          description: 'Shipping destinations list'
+          example: ['quebec', 'ontario']
         lv1_numberofpackagesperday:
           type: integer
           description: 'Number of packages shipped per day'
