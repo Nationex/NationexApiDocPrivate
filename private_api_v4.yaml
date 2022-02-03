@@ -6002,10 +6002,22 @@ SUVORK5CYII="
           type: string
           format: byte
           description: attachment 2
-        attachment3:
+        picture1:
           type: string
           format: byte
-          description: attachment 3
+          description: picture 1
+        picture2:
+          type: string
+          format: byte
+          description: picture 2
+        picture3:
+          type: string
+          format: byte
+          description: picture 3
+        picture4:
+          type: string
+          format: byte
+          description: picture 4
     DTOLead:
       type: object
       description: 'Lead for crm'
