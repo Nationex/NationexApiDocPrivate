@@ -5998,26 +5998,44 @@ AAECYmMDBAgQIJALiE1O7AABAgQIiI0NECBAgEAuIDY5sQMECBAgIDY2QIAAAQK5gNjkxA4QIECA
 gNjYAAECBAjkAmKTEztAgAABAmJjAwQIECCQC4hNTuwAAQIECIiNDRAgQIBALiA2ObEDBAgQICA2
 NkCAAAECuYDY5MQOECBAgIDY2AABAgQI5AJikxM7QIAAAQJiYwMECBAgkAs8wZUAgqa0VWgAAAAA
 SUVORK5CYII="
+        attachment_name:
+          type: string
+          example: 'mypdf.pdf'
         attachment2:
           type: string
           format: byte
           description: attachment 2
+        attachment2_name:
+          type: string
+          example: 'mypdf2.pdf'
         picture1:
           type: string
           format: byte
           description: picture 1
+        picture1_name:
+          type: string
+          example: 'picture1.jpg'
         picture2:
           type: string
           format: byte
           description: picture 2
+        picture2_name:
+          type: string
+          example: 'picture1.jpg'
         picture3:
           type: string
           format: byte
           description: picture 3
+        picture3_name:
+          type: string
+          example: 'picture3.png'
         picture4:
           type: string
           format: byte
           description: picture 4
+        picture4_name:
+          type: string
+          example: 'picture4.jpg'          
     DTOLead:
       type: object
       description: 'Lead for crm'
