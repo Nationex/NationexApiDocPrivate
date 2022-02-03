@@ -6008,6 +6008,13 @@ SUVORK5CYII="
         attachment2_name:
           type: string
           example: 'mypdf2.pdf'
+        attachment3:
+          type: string
+          format: byte
+          description: attachment 3
+        attachment3_name:
+          type: string
+          example: 'mypdf3.pdf'
         picture1:
           type: string
           format: byte
@@ -6028,14 +6035,7 @@ SUVORK5CYII="
           description: picture 3
         picture3_name:
           type: string
-          example: 'picture3.png'
-        picture4:
-          type: string
-          format: byte
-          description: picture 4
-        picture4_name:
-          type: string
-          example: 'picture4.jpg'          
+          example: 'picture3.png'         
     DTOLead:
       type: object
       description: 'Lead for crm'
