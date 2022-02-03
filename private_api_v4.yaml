@@ -5931,8 +5931,12 @@ SUVORK5CYII="
           type: boolean
           description: 'Is Insured'
         gs_equipment:
-          type: string
-          description: 'Equipment'
+          type: array
+          items:
+            type: string
+            enum: [pcsmart, wifiusb, munbynprinter, scalenocable, scalewithcable, monitor]
+          description: 'List of leased equipment'
+          example: ['pcsmart', 'munbynprinter', 'monitor']
         gs_thermalprinterlabelqty:
           type: integer
           format: int32
