@@ -1037,7 +1037,7 @@ paths:
     post:
       tags:
         - Users
-      summary: 'Get login'
+      summary: 'Get login consignee'
       description: 'Get WebKey from shipmentId, postal code, last 4 digits of phone number'
       requestBody:
         description: A JSON object containing the login information
