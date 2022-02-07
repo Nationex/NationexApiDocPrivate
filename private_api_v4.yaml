@@ -1171,6 +1171,37 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Users/name:
+    get:
+      tags:
+        - Users
+      summary: 'Get Name'
+      description: 'Gets Firstname and Lastname from email.'
+      operationId: getname
+      parameters:
+        - name: email
+          in: query
+          example: "test@test.com"
+          required: true
+          schema:
+            type: string
+      security: [] # no authentication
+      responses:
+        '200':
+          description: 'Ok'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOUser'
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Users/:
     post:
       tags:
