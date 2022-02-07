@@ -5652,6 +5652,10 @@ SUVORK5CYII="
             type: boolean
             description: "If true, the username/password is from the old system and has to be replaced"
             example: false
+          UserId:
+            type: integer
+            description: "Id used to update or delete user"
+            example: 29
     DTOLoginResponseApiToken:
       description: "Login response api token"
       type: object
