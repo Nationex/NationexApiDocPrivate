@@ -1193,6 +1193,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DTOUser'
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "Page not found"
         '500':
           description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
