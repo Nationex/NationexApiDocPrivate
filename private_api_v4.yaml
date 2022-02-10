@@ -1319,7 +1319,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-/Users/{id}:
+  /Users/{id}:
     put:
       tags:
         - Users
