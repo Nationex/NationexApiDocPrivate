@@ -3727,6 +3727,9 @@ components:
         Email:
           type: string
           example: test838@gmail.com
+        Title:
+          type: string
+          example: Président
         FirstName:
           type: string
           description: First name
