@@ -4840,7 +4840,7 @@ components:
           type: number
           format: float
           description: Renewal amount
-          example: 200.00
+          example: 500.00
         Gst:
           type: number
           format: float
@@ -4856,6 +4856,9 @@ components:
           format: float
           description: Renewal hst (Harmonized Sales Tax)
           example: 3.44
+        PaypalOrderId:
+          type: string
+          description : Paypal order id
     DTORatesDetail:
       description: "Contains a shipment's rates details. Note : the example amounts are random number, they are not accurate"
       type: object
