@@ -5958,6 +5958,10 @@ SUVORK5CYII="
           type: string
           description: 'Title of the case'
           example: 'Parcel 10344859601 not received'
+        customerid:
+          type: integer
+          description: Nationex Customer Id (5 or 6 digits)
+          example: 113300
         parcel_ids:
           type: array
           items:
