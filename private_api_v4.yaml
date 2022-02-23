@@ -3699,7 +3699,6 @@ components:
       type: object
       required:
         - Username
-        - Password
         - Email
         - CustomerId
         - FirstName
