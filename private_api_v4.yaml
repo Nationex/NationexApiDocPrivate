@@ -3698,7 +3698,6 @@ components:
     DTOUser:
       type: object
       required:
-        - UserId
         - Username
         - Password
         - Email
@@ -3721,7 +3720,7 @@ components:
           maxLength: 255
         Password:
           type: string
-          description: User's password
+          description: User's password. Required only for Create User
           example: Password123
           maxLength: 255
         Email:
