@@ -357,6 +357,97 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+/Shipments/web/{id}:
+    get:
+      tags:
+        - Shipments
+      summary: 'Get shipment web'
+      description: 'Returns details about a particular shipment'
+      operationId: getShipmentWeb
+      parameters:
+        - name: id
+          in: path
+          description: ID of the shipment (9 digits), ID of parcel (11 digits), barcode, reference, visitcode
+          required: true
+          example: 999999999
+          schema:
+            type: string
+        - name: tracking
+          in: query
+          description: Returns tracking (parcel history) or not
+          example: true
+          required: false
+          schema:
+            type: boolean
+        - name: parcels
+          in: query
+          description: Returns the parcel infos (weights & dimensions) or not
+          example: true
+          required: false
+          schema:
+            type: boolean
+        - name: consol
+          in: query
+          description: Returns all consolidated shipments or not
+          example: true
+          required: false
+          schema:
+            type: boolean
+        - name: images
+          in: query
+          description: Returns all photos and signatures of the shipment
+          example: true
+          required: false
+          schema:
+            type: boolean
+        - name: includeAll
+          in: query
+          description: Returns all parcel histories that are normally not displayed on the website. This parameter is hidden from the public Api.
+          example: true
+          required: false
+          schema:
+            type: boolean
+        - name: key
+          in: query
+          description: (Optional) Allows someone with the key to access the shipment without having Api Basic credentials, the key is unique to the shipment.
+          example: "1Z5DKWDpyPfcRDuY13W0UzI5LKfpelgod"
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Details about a shipment by ID'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOShipment'
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ShipmentId 501399432 does not exist"
+        '500':
+          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Shipments/{id}/reports:
     get:
       tags:
