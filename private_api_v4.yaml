@@ -357,7 +357,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-/Shipments/web/{id}:
+  /Shipments/web/{id}:
     get:
       tags:
         - Shipments
