@@ -6247,5 +6247,40 @@ SUVORK5CYII="
           type: string
           description: 'Phone of the contact'
           example: '514-514-5144'
+    DTOShipmentPOD:
+      type: object
+      description: 'POD for a shipment'
+      properties:
+        ShipmentId:
+          type: integer
+          format: int32
+          description: Needs to be -1 for auto generation, 9 digits otherwise, used to identify and track the shipment
+          example: 103882774
+        ExpeditionDate:
+          type: string
+          format: date
+          description: The expedition date
+          example: "2021-03-30"
+        Parcels:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOParcelPOD'
+        Photos:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOPhoto'
+          description: "Signatures and photos."
+    DTOParcelPOD:
+      type: object
+      description: 'POD for a parcel'
+      properties:
+        ParcelId:
+          type: integer
+          format: int64
+        DeliveredDate:
+          type: string
+          format: date-time
+        Contact:
+          type: string
 security:
     - BasicAuth: []
