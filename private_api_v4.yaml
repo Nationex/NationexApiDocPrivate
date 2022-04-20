@@ -44,7 +44,7 @@ info:
   version: '4.0'
   title: Nationex API
   contact:
-    email: tech@nationex.com
+    email: support@nationex.com
     url: https://nationex.com
   x-logo:
     url: 'https://apidocs.nationex.com/images/Nationex_logo.png'
