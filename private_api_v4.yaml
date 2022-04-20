@@ -47,7 +47,7 @@ info:
     email: support@nationex.com
     url: https://nationex.com
   x-logo:
-    url: 'Nationex_logo_VER_coul.png'
+    url: 'https://apidocs.nationex.com/images/Nationex_logo_VER_coul.png'
     altText: Nationex logo    
 servers:
   - url: 'https://api.nationex.com/api/v4'
