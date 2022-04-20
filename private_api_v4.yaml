@@ -30,7 +30,7 @@ info:
 
     # Other
     Nationex logo : https://apidocsprivate.nationex.com/images/Nationex_logo_CMYK.svg
-    Nationex icon : Nationex_logo_RES_coul.png
+    Nationex icon : https://apidocsprivate.nationex.com/images/Nationex_logo_RES_coul.png
 
     <SecurityDefinitions />
     # Response code
