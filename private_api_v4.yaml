@@ -29,8 +29,8 @@ info:
       For example, to authorize as demo / p@55w0rd the client would send Authorization: Basic ZGVtbzpwQDU1dzByZA==
 
     # Other
-    Nationex logo : https://apidocsprivate.nationex.com/images/Nationex_logo_CMYK.svg
-    Nationex icon : https://apidocsprivate.nationex.com/images/Nationex_logo_RES_coul.png
+      Nationex logo : https://apidocsprivate.nationex.com/images/Nationex_logo_CMYK.svg
+      Nationex icon : https://apidocsprivate.nationex.com/images/Nationex_logo_RES_coul.png
 
     <SecurityDefinitions />
     # Response code
