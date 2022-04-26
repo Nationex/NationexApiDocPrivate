@@ -6395,5 +6395,25 @@ SUVORK5CYII="
           format: date-time
         Contact:
           type: string
+    DTOParcelTemplate:
+      type: object
+      description: 'Parcel predetermined sizes'
+      properties:
+        ParcelTemplateId:
+          type: integer
+        ParcelDescription:
+          type: string
+        Height:
+          type: number
+        Length:
+          type: number
+        Width:
+          type: number
+        Weight:
+          type: number
+        NCV:
+          type: boolean
+        IsDefault:
+          type: boolean
 security:
     - BasicAuth: []
