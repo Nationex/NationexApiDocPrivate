@@ -2699,15 +2699,6 @@ paths:
               example: 
                 code: 401
                 message: "Invalid key"
-        '404':
-          description: 'NotFound: The resource requested does not exist'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/NotFound'
-              example: 
-                code: 404
-                message: "Parcel Template not found"
         '500':
           description: 'InternalServerError: 	There has been an unexpected error in our server'
           content:
