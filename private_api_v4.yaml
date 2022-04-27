@@ -994,7 +994,7 @@ paths:
     get:
       tags:
         - Shipments
-      summary: 'Get shipment IsScanned'
+      summary: 'IsScanned'
       description: 'Returns true if the shipment has been scanned'
       operationId: getShipmentIsScanned
       parameters:
