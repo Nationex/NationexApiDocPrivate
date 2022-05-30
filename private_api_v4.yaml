@@ -6596,6 +6596,9 @@ SUVORK5CYII="
         picture3_name:
           type: string
           example: 'picture3.png'         
+        ncv_labels:
+          type: integer
+          example: 3
     DTOLead:
       type: object
       description: 'Lead for crm'
