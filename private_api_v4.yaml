@@ -6595,7 +6595,22 @@ SUVORK5CYII="
           description: picture 3
         picture3_name:
           type: string
-          example: 'picture3.png'         
+          example: 'picture3.png'   
+        gs_depotid:
+          type: integer
+          example: 1
+          description: 'DepotId of nationex Depot'
+        agent_no:
+          type: integer
+          example: 1001
+          description: 'UserId of nationex user'
+        routecase:
+          type: boolean
+          example: true
+          description: 'This is always set to true'
+        caseorigincode:
+          type: string
+          enum: [phone, email, web, facebook, twitter, microsoftforms, internal]
         ncv_labels:
           type: integer
           example: 3
