@@ -5786,6 +5786,7 @@ components:
           type: integer
           format: int32
           description: "Beyond Id for billing"
+          example: 100
     DTORatesRequestParcel:
       type: object
       properties:
