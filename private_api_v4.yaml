@@ -5310,6 +5310,7 @@ components:
         CreationSource:
           description: Source of creation
           enum: [Unknown, NatConnect, NatClick, KD, AutoPickupService, ManualInput, CustomerSoftware, WebSite, ApiV2, ImportEDI, NatConnect2, ApiV4, EtiquetteEntrepot, ApiV3, ShipStation]
+          example: WebSite
     DTOShipmentCreated:
       type: object
       properties:
