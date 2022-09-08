@@ -5307,6 +5307,9 @@ components:
           enum: [LI, KC]
           example: LI
           default: LI
+        CreationSource:
+          description: Source of creation
+          enum: [Unknown, NatConnect, NatClick, KD, AutoPickupService, ManualInput, CustomerSoftware, WebSite, ApiV2, ImportEDI, NatConnect2, ApiV4, EtiquetteEntrepot, ApiV3, ShipStation]
     DTOShipmentCreated:
       type: object
       properties:
