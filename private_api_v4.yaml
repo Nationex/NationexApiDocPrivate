@@ -4786,6 +4786,14 @@ components:
           type: number
           description: "Customer's balance for Nationex website"
           example: "155.23"
+        DatamaxWebPrintEnabled:
+          type: boolean
+          description: "Enable NationexLabelWebPrint in website"
+          example: false
+        DatamaxWebPrintPort:
+          type: number
+          description : "NationexLabelWebPrint port"
+          example: 25
     DTODimensions:
       type: object
       properties:
