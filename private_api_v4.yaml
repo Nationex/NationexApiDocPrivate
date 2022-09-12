@@ -457,7 +457,7 @@ paths:
     get:
       tags:
         - Shipments
-      summary: 'Get shipment web'
+      summary: 'Get shipment list web'
       description: 'Returns details about a particular shipment'
       operationId: getShipmentWebList
       parameters:
@@ -526,7 +526,7 @@ paths:
     get:
       tags:
         - Shipments
-      summary: 'Get shipment web'
+      summary: 'Get shipment list web page'
       description: 'Returns details about a particular shipment'
       operationId: getShipmentWebListPage
       parameters:
