@@ -459,7 +459,7 @@ paths:
         - Shipments
       summary: 'Get shipment web'
       description: 'Returns details about a particular shipment'
-      operationId: getShipmentWeb
+      operationId: getShipmentWebList
       parameters:
         - name: id
           in: path
