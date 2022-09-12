@@ -6927,5 +6927,15 @@ SUVORK5CYII="
           type: boolean
         IsDefault:
           type: boolean
+    DTOShipmentListWeb:
+      type: object
+      properties:
+        Shipments:
+          type: array
+          items:
+            $ref: '#/components/schemas/DTOShipment'
+        TotalCount:
+          type: number
+          format: int32
 security:
     - BasicAuth: []
