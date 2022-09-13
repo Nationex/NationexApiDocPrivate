@@ -7088,7 +7088,7 @@ SUVORK5CYII="
     DTOConsigneeList:
       type: object
       properties:
-        Shipments:
+        Consignees:
           type: array
           items:
             $ref: '#/components/schemas/DTOConsignee'
