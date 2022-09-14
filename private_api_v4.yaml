@@ -7095,5 +7095,18 @@ SUVORK5CYII="
         TotalCount:
           type: number
           format: int32
+    DTOValidateCollectResponse:
+      type: object
+      properties:
+        AccountName:
+          type: string
+        AccountNumber:
+          type: string
+        Address:
+          type: string
+        City:
+          type: string
+        IsValid:
+          type: boolean
 security:
     - BasicAuth: []
