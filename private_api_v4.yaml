@@ -3859,10 +3859,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/responses/DTOValidateCollectResponse'
-              examples:
-                    Boolean Response:
-                        value:
-                          false
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
