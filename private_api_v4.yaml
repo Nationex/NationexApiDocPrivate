@@ -305,6 +305,12 @@ paths:
           required: false
           schema:
             type: boolean
+        - name: username
+          in: query
+          description: (Optional) Name of the user
+          required: false
+          schema:
+            type: string
       requestBody:
           description: "shipment info"
           required: true
