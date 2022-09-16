@@ -561,6 +561,37 @@ paths:
             format: int32
             default: 100
           example: "100"
+        - name: subAccountId
+          in: query
+          description: CustomerId
+          required: false
+          schema: 
+            type: integer
+            format: int32
+        - name: dateStart
+          in: query
+          required: false
+          schema:
+            type: string
+            format: Date
+        - name: dateEnd
+          in: query
+          required: false
+          schema:
+            type: string
+            format: Date
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
+        - name: type
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [Delivery, PickupReturn, PickupDelivery]
       responses:
         '200':
           description: 'Details about a shipment by ID'
