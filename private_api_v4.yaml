@@ -1186,7 +1186,7 @@ paths:
             maximum: 999999999
       responses:
         '200':
-          description: 'Trus if has been scanned'
+          description: 'True if has been scanned'
           content:
             application/json:
               schema:
@@ -1471,6 +1471,37 @@ paths:
                 message: "ShipmentId 501399432 does not exist"
         '500':
           description: 'InternalServerError: There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Users/updateLastLogin:
+    get:
+      tags:
+        - Users
+      summary: 'Update Last Login'
+      description: 'Updates the last login of the user'
+      operationId: updateLastLogin
+      parameters:
+        - name: userId
+          in: query
+          example: 2
+          required: true
+          schema:
+            type: integer
+      security: [] # no authentication
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: boolean
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
