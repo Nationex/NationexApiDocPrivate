@@ -658,6 +658,7 @@ paths:
           required: false
           schema:
             type: boolean
+        
       responses:
         '200':
           description: 'Success'
@@ -6613,6 +6614,9 @@ SUVORK5CYII="
             type: integer
             description: "Id used to update or delete user"
             example: 29
+          WebUserId:
+            type: integer
+            description: "Id to update last login"
     DTOLoginResponseApiToken:
       description: "Login response api token"
       type: object
