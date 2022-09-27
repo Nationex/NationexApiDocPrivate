@@ -1478,16 +1478,16 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Users/updateLastLogin:
-    get:
+  /Users/{Id}/updateLastLogin:
+    put:
       tags:
         - Users
       summary: 'Update Last Login'
       description: 'Updates the last login of the user'
       operationId: updateLastLogin
       parameters:
-        - name: userId
-          in: query
+        - name: Id
+          in: path
           example: 2
           required: true
           schema:
