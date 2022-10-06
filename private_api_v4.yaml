@@ -644,7 +644,7 @@ paths:
           schema:
             type: integer
             format: int32
-        - name: language
+        - name: lang
           in: query
           required: true
           description: Language of the report
@@ -658,7 +658,12 @@ paths:
           required: false
           schema:
             type: boolean
-        
+        - name: light
+          in: query
+          description: Lighter version of the report
+          required: false
+          schema:
+            type: boolean
       responses:
         '200':
           description: 'Success'
