@@ -5131,7 +5131,7 @@ components:
           type: string
         Status:
           type: string
-          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender]
+          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, PickupAttemptFailed, RefusedDelivery, ReturnToSender]
         StatusDescriptionEn:
           type: string
           description: 'Description of Status in english'
@@ -5368,7 +5368,7 @@ components:
           example: 5.5
         ShipmentStatus:
           type: string
-          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
+          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, PickupAttemptFailed, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
           description: "Global status of the entire shipment"
           example: 'Creation'
         ShipmentStatusFr:
@@ -6753,7 +6753,7 @@ SUVORK5CYII="
       properties:
         ShipmentStatus:
           type: string
-          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
+          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, PickupAttemptFailed, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
           description: "Global status of the entire shipment"
           example: 'Creation'
         ShipmentStatusFr:
@@ -6838,7 +6838,7 @@ SUVORK5CYII="
           example: "An unexpected situation prevents us from completing your delivery today. Don't worry, we are doing everything we can to remedy the situation, you will receive a notification when your order is reshipped."
         ShipmentStatus:
           type: string
-          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
+          enum: [Creation, Pickup, Transit, OutForDelivery, Delivered, OnHold, Attention, Cancelled, ReturnCompleted, OutForPickup, PickupAttemptFailed, RefusedDelivery, ReturnToSender, PartiallyPickedUp, PartiallyInTransit, PartiallyOutForDelivery, PartiallyDelivered]
           description: "Global status of the entire shipment"
           example: 'Attention'
     DTOEvent:
