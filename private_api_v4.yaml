@@ -5073,6 +5073,10 @@ components:
           type: number
           description : "NationexLabelWebPrint port"
           example: 25
+        WebClaimProofNotRequired:
+          type: boolean
+          description: "True when proof not required on website"
+          example: false
     DTODimensions:
       type: object
       properties:
