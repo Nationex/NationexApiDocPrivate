@@ -1222,7 +1222,80 @@ paths:
                 $ref: '#/components/responses/InternalServerError'
               example: 
                 code: 500
-                message: "Internal server error"                
+                message: "Internal server error"           
+  /Shipments/{id}/AddConsigneeNotification:
+    put:
+      tags:
+        - Shipments
+      summary: 'AddConsigneeNotification'
+      description: 'Adds phone and/or email to notifications'
+      operationId: addConsigneeNotification
+      parameters:
+        - name: id
+          in: path
+          description: ID of the shipment (9 digits)
+          required: true
+          example: 103912639
+          schema:
+            type: integer
+            format: int32
+            minimum: 100000000
+            maximum: 999999999
+        - name: key
+          in: query
+          description: (Optional) Allows someone with the key to access the shipment without having Api Basic credentials, the key is unique to the shipment.
+          example: "MXcmsRiebeP2hesmckK48evtYoU7eLxd7"
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: query
+          description: consignee email
+          example: 'testemail@gmail.com'
+          required: false
+          schema:
+            type: string
+        - name: phone
+          in: query
+          description: consignee email
+          example: '4503928493'
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'True if has been scanned'
+          content:
+            application/json:
+              schema:
+                type: boolean
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ShipmentId 501399432 does not exist"
+        '500':
+          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"            
   /Shipments/:
     get:
       tags:
@@ -4212,6 +4285,123 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Customers/{id}/notification:
+    put:
+      tags:
+        - Customers
+      summary: 'Update customer notifications'
+      description: 'Update customer notifications'
+      parameters:
+        - in: path
+          name: id
+          description: Nationex Customer Id (5 or 6 digits)
+          required: true
+          example: 113300
+          schema:
+            type: integer
+            format: int32
+      requestBody:
+          description: Notification Exceptions
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOCustomerNotification'
+      security:
+        - BasicAuth: []
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                        value:
+                          true
+        '400':
+          description: 'InvalidInput:	Specific error message will be returned'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InvalidInput'
+              example: 
+                code: 400
+                message: "Customer 113300 is not active"
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '500':
+          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+    get:
+      tags:
+        - Customers
+      summary: 'Get customer notifications'
+      description: 'Get customer notifications'
+      parameters:
+        - in: path
+          name: id
+          description: Nationex Customer Id (5 or 6 digits)
+          required: true
+          example: 113300
+          schema:
+            type: integer
+            format: int32
+      security:
+        - BasicAuth: []
+      responses:
+        '200':
+          description: 'Ok'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DTOCustomerNotification'
+        '400':
+          description: 'InvalidInput:	Specific error message will be returned'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InvalidInput'
+              example: 
+                code: 400
+                message: "Customer 113300 is not active"
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '500':
+          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Locations/{postalCode}:
     get:
       tags:
@@ -4750,6 +4940,9 @@ components:
         Active:
           type: boolean
           description: Is Active
+        PrintLabelPdf:
+          type: boolean
+          description: Print label in pdf in website instead of using NatLabelWebPrint
     DTOParcelHistory:
       type: object
       description: 'Event of a single parcel'
@@ -6680,6 +6873,9 @@ SUVORK5CYII="
           type: string
           description: "API token to be used for authentication for future API calls"
           example: JFIEJ9382H2HH4KJSI98
+        IsMaster:
+          type: boolean
+          description: "Compte master permet de voir la facturation"
     DTOPODContact:
       description: "Contact name and email to send a POD"
       type: object
@@ -7166,6 +7362,10 @@ SUVORK5CYII="
           type: string
           description: 'Phone of the contact'
           example: '514-514-5144'
+        description:
+          type: string
+          description: 'Description'
+          example: 'description'
     DTOShipmentPOD:
       type: object
       description: 'POD for a shipment'
@@ -7254,5 +7454,25 @@ SUVORK5CYII="
           type: string
         IsValid:
           type: boolean
+    DTOCustomerNotification:
+      type: object
+      properties :
+        NotificationExceptions:
+          type: array
+          items: 
+            $ref: '#/components/schemas/DTONotificationException'
+        NotificationSmsEnabled:
+          type: boolean
+        NotificationsEmailEnabled:
+          type: boolean
+    DTONotificationException:
+      type: object
+      properties:
+        ExceptionId:
+          type: integer
+        Active:
+          type: boolean
+        TypeNotif:
+          type: string
 security:
     - BasicAuth: []
