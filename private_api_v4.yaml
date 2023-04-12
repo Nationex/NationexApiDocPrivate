@@ -1818,6 +1818,63 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Users/CreateByEmail:
+    post:
+      tags:
+        - Users
+      summary: 'Create user by email'
+      description: "Create a user's account by email"
+      operationId: createUserByEmail
+      requestBody:
+        description: User object as JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DTOUserByEmail'
+      security:
+        - BasicAuth: []
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '409':
+          description: 'Conflict: The User already exists.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Conflict'
+              example: 
+                code: 409
+                message: "Email already exists for account"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Users/{id}:
     put:
       tags:
@@ -7474,5 +7531,18 @@ SUVORK5CYII="
           type: boolean
         TypeNotif:
           type: string
+    DTOUserByEmail:
+      type: object
+      required:
+        - Email
+        - CustomerId
+      properties:
+        CustomerId:
+          type: integer
+          description: Nationex Customer Id (5 or 6 digits) of the collect account
+          example: 165556
+        Email:
+          type: string
+          example: test838@gmail.com
 security:
     - BasicAuth: []
