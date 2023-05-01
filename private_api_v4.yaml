@@ -7544,5 +7544,8 @@ SUVORK5CYII="
         Email:
           type: string
           example: test838@gmail.com
+        IsMaster:
+          type: boolean
+          example: false
 security:
     - BasicAuth: []
