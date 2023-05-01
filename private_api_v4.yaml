@@ -1836,7 +1836,20 @@ paths:
         - BasicAuth: []
       responses:
         '200':
-          description: 'Success'
+          description: 'Success for updating existing user'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '201':
+          description: 'Success for creating new user'
           content:
             application/json:
               schema:
