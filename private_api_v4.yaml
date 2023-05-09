@@ -6928,6 +6928,10 @@ SUVORK5CYII="
           WebUserId:
             type: integer
             description: "Id to update last login"
+          PreviousLogin:
+            type: string
+            format: date-time
+            description: Previous login
     DTOLoginResponseApiToken:
       description: "Login response api token"
       type: object
