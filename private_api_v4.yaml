@@ -5013,6 +5013,14 @@ components:
         PrintLabelPdf:
           type: boolean
           description: Print label in pdf in website instead of using NatLabelWebPrint
+        AllowDelivery:
+          type: boolean
+        AllowPickupReturn:
+          type: boolean
+        AllowPickupDelivery:
+          type: boolean
+        AllowDeliveryCollect:
+          type: boolean
     DTOParcelHistory:
       type: object
       description: 'Event of a single parcel'
