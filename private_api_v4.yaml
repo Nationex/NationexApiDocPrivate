@@ -733,6 +733,15 @@ paths:
             enum: [4x6, 85x11]
             default: 4x6
           example: 4x6
+        - name: type
+          in: query
+          description: Type of file
+          example: PDF
+          required: false
+          schema:
+            type: string
+            enum: [PDF, PNG]
+            default: PDF
       responses:
         '200':
           description: 'Success'
