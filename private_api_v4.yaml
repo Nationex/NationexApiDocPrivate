@@ -6330,6 +6330,10 @@ components:
           format: date
           example: '2021-05-05'
           description: 'Estimated date of delivery'
+        IsGreen:
+          type: boolean
+          example: true
+          description: 'Green delivery at the destination (electric vehicle)'
     DTOTaxCharge:
       description: "Name, rate and amount of tax"
       type: object
