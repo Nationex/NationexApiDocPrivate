@@ -1517,7 +1517,7 @@ paths:
   /Shipments/GetShipmentFromShipmentApiKey:
     get:
       tags:
-        - GetShipmentFromShipmentApiKey
+        - Shipments
       summary: 'Get Shipment from ShipmentApiKey'
       description: 'Returns the list of shipments if searching by address, or a list containing a single shipment if searching by waybill (ShipmentId, Barcode, ParcelId or Reference)'
       operationId: GetShipmentFromShipmentApiKey
