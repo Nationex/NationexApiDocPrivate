@@ -90,7 +90,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DTOShipmentCreated'
         '400':
-          description: 'InvalidInput: 	The max length of a field has been exceeded or the postal code is not covered by Nationex. The specific error message will be returned'
+          description: 'InvalidInput:   The max length of a field has been exceeded or the postal code is not covered by Nationex. The specific error message will be returned'
           content:
             application/json:
               schema:
@@ -117,7 +117,7 @@ paths:
                 code: 409
                 message: "Duplicate shipment ID: 501339228"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -211,7 +211,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -265,7 +265,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -333,7 +333,7 @@ paths:
                         value:
                           true
         '400':
-          description: 'InvalidInput: 	The max length of a field has been exceeded or the postal code is not covered by Nationex. The specific error message will be returned'
+          description: 'InvalidInput:   The max length of a field has been exceeded or the postal code is not covered by Nationex. The specific error message will be returned'
           content:
             application/json:
               schema:
@@ -360,7 +360,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -451,7 +451,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -520,7 +520,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -620,7 +620,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -691,7 +691,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -769,7 +769,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -835,7 +835,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -954,7 +954,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1017,7 +1017,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1088,7 +1088,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1158,7 +1158,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1224,7 +1224,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1276,7 +1276,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1349,7 +1349,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1447,7 +1447,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1479,7 +1479,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/DTOShipment'
         '400':
-          description: 'InvalidInput:	The max length of a field has been exceeded or other input error. Specific error message will be returned'
+          description: 'InvalidInput:  The max length of a field has been exceeded or other input error. Specific error message will be returned'
           content:
             application/json:
               schema:
@@ -1506,7 +1506,7 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -1514,7 +1514,7 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Shipments/GetShipmentFromShipmentApiKey:
+  /Shipments/GetShipmentFromShipmentApiKey/:
     get:
       tags:
         - Shipments
@@ -1547,7 +1547,57 @@ paths:
                 code: 404
                 message: "ShipmentId 501399432 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Shipments/ValidateWaybill/{id}:
+    get:
+      tags:
+        - Shipments
+      summary: 'ValidateWaybill'
+      description: 'Returns IsGreen and Consignee email and sms. Does not use regular basic authentication like the rest of v4, it is a different key passed in Authorization header'
+      operationId: ValidateWaybill
+      parameters:
+        - name: id
+          in: path
+          description: ID of the shipment or ID of a parcel for a single label
+          required: true
+          example: 103848576
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: 'Details about a shipment by ID'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOValidateWaybillResponse'
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ShipmentId 501399432 does not exist"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2268,7 +2318,7 @@ paths:
                 code: 409
                 message: "Resource not found"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2308,7 +2358,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DTORatesDetail'
         '400':
-          description: 'InvalidInput: 	The postal code is not covered by Nationex or other invalid input. The specific error message will be returned'
+          description: 'InvalidInput:   The postal code is not covered by Nationex or other invalid input. The specific error message will be returned'
           content:
             application/json:
               schema:
@@ -2326,7 +2376,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2368,7 +2418,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DTOConsigneeCreated'
         '400':
-          description: 'InvalidInput:	The max length of a field has been exceeded or other input error. Specific error message will be returned'
+          description: 'InvalidInput:  The max length of a field has been exceeded or other input error. Specific error message will be returned'
           content:
             application/json:
               schema:
@@ -2386,7 +2436,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2447,7 +2497,7 @@ paths:
                 code: 404
                 message: "ConsigneeId 388283984 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2521,7 +2571,7 @@ paths:
                 code: 404
                 message: "ConsigneeId 388283984 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2588,7 +2638,7 @@ paths:
                 code: 404
                 message: "ConsigneeId 388283984 does not exist"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2667,7 +2717,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -2746,7 +2796,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3238,7 +3288,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3288,7 +3338,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3338,7 +3388,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3389,7 +3439,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3433,7 +3483,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3500,7 +3550,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DTOTransitDelay'
         '400':
-          description: 'InvalidInput:	The postal code is not server by Nationex or other input error. Specific error message will be returned'
+          description: 'InvalidInput:  The postal code is not server by Nationex or other input error. Specific error message will be returned'
           content:
             application/json:
               schema:
@@ -3527,7 +3577,7 @@ paths:
                 code: 404
                 message: "Postal code A0A0A0 not found"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3597,7 +3647,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3664,7 +3714,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3711,7 +3761,7 @@ paths:
                         value:
                           true
         '400':
-          description: 'InvalidInput:	Specific error message will be returned'
+          description: 'InvalidInput:  Specific error message will be returned'
           content:
             application/json:
               schema:
@@ -3729,7 +3779,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -3763,7 +3813,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/DTOEconomaxPackage'
         '400':
-          description: 'InvalidInput:	Specific error message will be returned'
+          description: 'InvalidInput:  Specific error message will be returned'
           content:
             application/json:
               schema:
@@ -3781,7 +3831,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -4335,7 +4385,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -4503,7 +4553,7 @@ paths:
                         value:
                           true
         '400':
-          description: 'InvalidInput:	Specific error message will be returned'
+          description: 'InvalidInput:  Specific error message will be returned'
           content:
             application/json:
               schema:
@@ -4521,7 +4571,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -4555,7 +4605,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/DTOCustomerNotification'
         '400':
-          description: 'InvalidInput:	Specific error message will be returned'
+          description: 'InvalidInput:  Specific error message will be returned'
           content:
             application/json:
               schema:
@@ -4573,7 +4623,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -4921,7 +4971,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -4968,7 +5018,7 @@ paths:
                 code: 401
                 message: "Invalid key"
         '500':
-          description: 'InternalServerError: 	There has been an unexpected error in our server'
+          description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
             application/json:
               schema:
@@ -5499,14 +5549,14 @@ components:
         NCV:
           type: boolean
           description: "Non conveyable. These are the criterias for non-conveyable items :
--	At least one of the dimensions exceed 36 inches (91.5cm) or one of the two smallest dimensions exceeds 30 inches (76cm)
--	Weight exceeds 70 lbs (32 kg)
--	Identified as non-conveyable with stickers
--	Is a bucket
--	Hazardous materials identified as toxic, corrosive
--	In bulk items like tires, display stands
--	Objects wrapped in plastic or paper
--	Bags or pouches"
+-  At least one of the dimensions exceed 36 inches (91.5cm) or one of the two smallest dimensions exceeds 30 inches (76cm)
+-  Weight exceeds 70 lbs (32 kg)
+-  Identified as non-conveyable with stickers
+-  Is a bucket
+-  Hazardous materials identified as toxic, corrosive
+-  In bulk items like tires, display stands
+-  Objects wrapped in plastic or paper
+-  Bags or pouches"
         Weight:
           type: number
           format: float
@@ -6480,14 +6530,14 @@ components:
         NCV:
           type: boolean
           description: "Non conveyable. These are the criterias for non-conveyable items :
--	At least one of the dimensions exceed 36 inches (91.5cm) or one of the two smallest dimensions exceeds 30 inches (76cm)
--	Weight exceeds 70 lbs (32 kg)
--	Identified as non-conveyable with stickers
--	Is a bucket
--	Hazardous materials identified as toxic, corrosive
--	In bulk items like tires, display stands
--	Objects wrapped in plastic or paper
--	Bags or pouches"
+-  At least one of the dimensions exceed 36 inches (91.5cm) or one of the two smallest dimensions exceeds 30 inches (76cm)
+-  Weight exceeds 70 lbs (32 kg)
+-  Identified as non-conveyable with stickers
+-  Is a bucket
+-  Hazardous materials identified as toxic, corrosive
+-  In bulk items like tires, display stands
+-  Objects wrapped in plastic or paper
+-  Bags or pouches"
         Weight:
           type: number
           format: float
@@ -7149,7 +7199,7 @@ SUVORK5CYII="
           example: 10250
         UserFullName:
           type: string
-          example: "Jessica	Piveteau"
+          example: "Jessica  Piveteau"
     DTOShipmentStatusHistory:
       description: "History of shipment status"
       type: object
@@ -7698,5 +7748,22 @@ SUVORK5CYII="
         ParcelId: 
           type: number
           example: 59921803901
+    DTOValidateWaybillResponse:
+      type: object
+      properties:
+        ShipmentId:
+          type: integer
+          description: Nationex Shipment Id (9 digits)
+          example: 506382738
+        ConsigneeEmail:
+          type: string
+          example: test838@gmail.com
+        ConsigneeSms:
+          type: string
+          example: 4382773849
+        IsGreen:
+          type: boolean
+          example: true
+          
 security:
     - BasicAuth: []
