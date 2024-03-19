@@ -5909,7 +5909,7 @@ components:
             $ref: '#/components/schemas/DTOShipmentStatusHistory'
         ShipmentType:
           type: string
-          enum: [Delivery, PickupReturn, PickupDelivery]
+          enum: [Delivery, PickupReturn, PickupDelivery, International]
           example: Delivery
           default: Delivery
           description: Delivery - Schedule a pickup at the address registered in your Nationex account and deliver it to your consignee. PickupReturn - Parcels picked up at a location and brought back to your location. PickupDelivery - Parcels picked up at one location and shipped to another location which is different than your own location. Billed to your Nationex account.
@@ -6047,7 +6047,7 @@ components:
           example: "2021-03-30"
         ShipmentType:
           type: string
-          enum: [Delivery, PickupReturn, PickupDelivery]
+          enum: [Delivery, PickupReturn, PickupDelivery, International]
           example: Delivery
           default: Delivery
           description: Delivery - Schedule a pickup at the address registered in your Nationex account and deliver it to your consignee. PickupReturn - Parcels picked up at a location and brought back to your location. PickupDelivery - Parcels picked up at one location and shipped to another location which is different than your own location. Billed to your Nationex account.
@@ -6169,7 +6169,7 @@ components:
             example : "2021-03-31"
         ShipmentType:
           type: string
-          enum: [Delivery, PickupReturn, PickupDelivery]
+          enum: [Delivery, PickupReturn, PickupDelivery, International]
           example: Delivery
           default: Delivery
           description: Delivery - Schedule a pickup at the address registered in your Nationex account and deliver it to your consignee. PickupReturn - Parcels picked up at a location and brought back to your location. PickupDelivery - Parcels picked up at one location and shipped to another location which is different than your own location. Billed to your Nationex account.
@@ -6818,7 +6818,7 @@ components:
           maxLength: 50
         ShipmentType:
           type: string
-          enum: [Delivery, PickupReturn, PickupDelivery]
+          enum: [Delivery, PickupReturn, PickupDelivery, International]
           description: "Shipment type, if null it will return all types"
         ExpDate:
           type: string
