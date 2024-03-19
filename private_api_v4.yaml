@@ -3703,7 +3703,7 @@ paths:
                 description: Used only with `application/png` responses
                 example: attachment; filename="manifest_2021-04-28.png"
           content:
-            application/pdf:
+            application/png:
               schema:
                 type: string
                 format: binary
