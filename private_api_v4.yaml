@@ -1605,6 +1605,36 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Shipments/GreenParcelCount:
+    get:
+      tags:
+        - Shipments
+      summary: 'GreenParcelCount'
+      description: 'Get the all time number of parcels assigned to green routes. Does not require authentication'
+      operationId: GreenParcelCount
+      responses:
+        '200':
+          description: 'All time number of parcels assigned to green routes'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: number
+              examples:
+                    Value Response:
+                      value:
+                        232443
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Users/login:
     post:
       tags:
