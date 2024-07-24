@@ -1555,13 +1555,13 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Shipments/ValidateWaybill/{id}:
+  /Shipments/teWaybill/{id}:
     get:
       tags:
         - Shipments
-      summary: 'ValidateWaybill'
+      summary: 'teWaybill'
       description: 'Returns IsGreen and Consignee email and sms. Does not use regular basic authentication like the rest of v4, it is a different key passed in Authorization header'
-      operationId: ValidateWaybill
+      operationId: teWaybill
       parameters:
         - name: id
           in: path
@@ -1577,7 +1577,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DTOValidateWaybillResponse'
+                $ref: '#/components/schemas/DTOteWaybillResponse'
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
           content:
@@ -7838,6 +7838,8 @@ SUVORK5CYII="
         IsGreen:
           type: boolean
           example: true
-          
+        Token: 
+          type: string
+          example: "egWPJD7gDXVJjcyctstXMzRCpfVWaa"
 security:
     - BasicAuth: []
