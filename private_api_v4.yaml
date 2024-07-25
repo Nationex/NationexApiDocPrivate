@@ -1302,13 +1302,13 @@ paths:
             format: int32
             minimum: 100000000
             maximum: 999999999
-        - name: key
+        - name: nocivic
           in: query
-          description: (Optional) Allows someone with the key to access the shipment without having Api Basic credentials, the key is unique to the shipment.
-          example: "MXcmsRiebeP2hesmckK48evtYoU7eLxd7"
+          description: No Civic of the shipment destination address, used for validating the user
+          example: "1417"
           required: true
           schema:
-            type: string
+            type: number
         - name: email
           in: query
           description: consignee email
