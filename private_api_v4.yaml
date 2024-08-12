@@ -6069,6 +6069,14 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/DTOAddressHistory'
+        LastLatitude:
+          type: number
+          description: 'When out for delivery, Latitude of the latest stop, when delivered, Latitude of the delivery'
+          example: 45.5009813
+        LastLongitude:
+          type: number
+          description: 'When out for delivery, Longitude of the latest stop, when delivered, Longitude of the delivery'
+          example: -73.4425945
     DTOShipmentCreate:
       type: object
       description: "Request object to create a shipment. For a Delivery and PickupDelivery type, Destination is required. For a PickupReturn and PickupDelivery type, Sender is required. Otherwise it is the customer's address by default"
