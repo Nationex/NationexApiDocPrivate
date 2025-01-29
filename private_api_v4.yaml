@@ -5628,6 +5628,8 @@ components:
           type: string
           example: 392-3904-2948
           description: "Name of the broker associated to the Sector Id"
+        Geocoding:
+          $ref: '#/components/schemas/DTOGeocoding'
     DTOCustomerInfo:
       type: object
       properties:
@@ -5967,6 +5969,8 @@ components:
           type: string
           example: 392-3904-2948
           description: "Name of the broker associated to the Sector Id"
+        Geocoding:
+          $ref: '#/components/schemas/DTOGeocoding'
     DTOShipment:
       type: object
       required:
