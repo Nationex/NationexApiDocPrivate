@@ -5295,6 +5295,71 @@ paths:
               example: 
                 code: 401
                 message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "Barcode not found {DTOPenguinScanEvent.BarcodeString}"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Penguin/LockerCode:
+    post:
+      tags:
+        - Penguin
+      summary: 'Penguin locker code'
+      description: 'Sends a locker code to Nationex. A notification is then send to the parcel consignee with the code.'
+      security:
+        - BasicAuth: []
+      requestBody:
+          description: DTOPenguinLockerCode
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOPenguinLockerCode'
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not invalid.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "Barcode not found {DTOPenguinLockerCode.Barcode}"
         '500':
           description: 'InternalServerError:   There has been an unexpected error in our server'
           content:
@@ -8163,5 +8228,21 @@ SUVORK5CYII="
           type: string
         SignatureFile:
           type: string
+    DTOPenguinLockerCode:
+      description: 'Contains Pin info to be sent to the parcel consignee and allow him to get the box at the point of service'
+      type: object
+      properties:
+        Barcode:
+          type: string
+          description: "Parcel barcode or Parcel Id"
+          example: "51266425401"
+        PPULocationId: 
+          type: number
+          description: "Penguin Location Id"
+          example: 289
+        Code:
+          type: string
+          description: "Locker Code / PIN"
+          example: "884722"
 security:
     - BasicAuth: []
