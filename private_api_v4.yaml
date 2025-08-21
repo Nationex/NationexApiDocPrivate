@@ -8244,9 +8244,9 @@ SUVORK5CYII="
           description: "Parcel barcode or Parcel Id"
           example: "51266425401"
         PPULocationId: 
-          type: number
+          type: string
           description: "Penguin Location Id"
-          example: 289
+          example: 'PPU#003'
         Code:
           type: string
           description: "Locker Code / PIN"
