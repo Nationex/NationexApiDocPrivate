@@ -8205,6 +8205,13 @@ SUVORK5CYII="
           type: number
           description: "Location longitude"
           example: "45.6358175"
+        IsLockerBox:
+          type: number
+          description: "True if is a locker box"
+        OpenHours:
+          type: array
+          items: 
+            $ref: '#/components/schemas/DTOOpenHour'
     DTOPenguinScanEvent:
       description: "Penguin scan event"
       type: object
@@ -8244,5 +8251,28 @@ SUVORK5CYII="
           type: string
           description: "Locker Code / PIN"
           example: "884722"
+    DTOOpenHour:
+      type: object
+      properties:
+        DayName:
+          type: string
+          description: 'Name of the day (e.g., "Monday")'
+          example: "Monday"
+        IsClosed:
+          type: boolean
+          description: 'Indicates if the location is closed on this day'
+          example: false
+        Is24Hours:
+          type: boolean
+          description: 'Indicates if the location is open 24 hours on this day'
+          example: false
+        OpenTime:
+          type: string
+          description: 'Opening time in 24-hour format ("HH:mm"), null if closed or 24 hours'
+          example: "10:00"
+        CloseTime:
+          type: string
+          description: 'Closing time in 24-hour format ("HH:mm"), null if closed or 24 hours'
+          example: "19:00"
 security:
     - BasicAuth: []
