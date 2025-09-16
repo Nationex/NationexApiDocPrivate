@@ -8243,10 +8243,10 @@ SUVORK5CYII="
           type: string
           description: "Parcel barcode or Parcel Id"
           example: "51266425401"
-        PPULocationId: 
+        PPULocationCode: 
           type: string
-          description: "Penguin Location Id"
-          example: 'PPU#003'
+          description: "Penguin Unique Location Code"
+          example: 'PSAB001'
         Code:
           type: string
           description: "Locker Code / PIN"
