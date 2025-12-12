@@ -1731,6 +1731,57 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
+  /Shipments/botsearch/{search}:
+    get:
+      tags:
+        - Shipments
+      summary: 'Bot search'
+      description: 'Returns the shipment that best matches the search. No CustomerID parameter is needed, it will be obtained from the Api Key provided, which is required. If phone number is provided it has to be in a single number'
+      operationId: botSearch
+      parameters:
+        - name: search
+          in: path
+          description: ID or address or reference of the shipment
+          required: true
+          example: 1837 Sesame Street Brossard
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Details about a shipment by ID'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DTOShipment'
+        '401':
+          description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '404':
+          description: 'NotFound: The resource requested does not exist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/NotFound'
+              example: 
+                code: 404
+                message: "ShipmentId 501399432 does not exist"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
   /Users/login:
     post:
       tags:
@@ -2386,6 +2437,92 @@ paths:
                   $ref: '#/components/schemas/DTOUser'
         '401':
           description: 'Unauthorized: The key is either missing, or is used on the wrong server, or is not associated with the provided CustomerId. Dev keys can only be used on our dev servers and production keys can only be used on our production servers.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Users/loginbot:
+    post:
+      tags:
+        - Users
+      summary: 'Login phone bot'
+      description: 'Authenticate Nationex customer with a PIN and return the customer api key'
+      requestBody:
+        description: A JSON object containing the CustomerId and Pin
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DTOLoginBotRequest'
+      security: [] # no authentication
+      responses:
+        '200':
+          description: 'Login Response'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOLoginBotResponse'
+        '401':
+          description: 'Unauthorized: The PIN provided does not match the Customer ID'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Unauthorized'
+              example: 
+                code: 401
+                message: "Invalid key"
+        '500':
+          description: 'InternalServerError:   There has been an unexpected error in our server'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/InternalServerError'
+              example: 
+                code: 500
+                message: "Internal server error"
+  /Users/updatePin:
+    post:
+      tags:
+        - Users
+      summary: 'Update Pin'
+      description: 'Update customer Pin'
+      requestBody:
+        description: A JSON object containing the CustomerId and Pin
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DTOLoginBotRequest'
+        security:
+        - BasicAuth: []
+      responses:
+        '200':
+          description: 'Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+              examples:
+                    Boolean Response:
+                      value:
+                        true
+        '401':
+          description: 'Unauthorized: The PIN provided does not match the Customer ID'
           content:
             application/json:
               schema:
@@ -8274,5 +8411,23 @@ SUVORK5CYII="
           type: string
           description: 'Closing time in 24-hour format ("HH:mm"), null if closed or 24 hours'
           example: "19:00"
+    DTOLoginBotRequest:
+      type: object
+      properties:
+        CustomerId:
+          type: number
+          description: 'Nationex CustomerID'
+          example: 165556
+        Pin:
+          type: string
+          description: 'Customer PIN, 5 digits, provided by Nationex'
+          example: '65467'
+    DTOLoginBotResponse:
+      type: object
+      properties:
+        ApiToken:
+          type: string
+          description: 'Token to be used for subsequent Nationex Api calls. The token is only valid for the related customers.'
+    
 security:
     - BasicAuth: []
