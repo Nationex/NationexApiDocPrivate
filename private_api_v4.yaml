@@ -1731,21 +1731,20 @@ paths:
               example: 
                 code: 500
                 message: "Internal server error"
-  /Shipments/botsearch/{search}:
-    get:
+  /Shipments/botsearch:
+    post:
       tags:
         - Shipments
       summary: 'Bot search'
       description: 'Returns the shipment that best matches the search. No CustomerID parameter is needed, it will be obtained from the Api Key provided, which is required. If phone number is provided it has to be in a single number'
       operationId: botSearch
-      parameters:
-        - name: search
-          in: path
-          description: ID or address or reference of the shipment
+      requestBody:
+          description: Shipment to create
           required: true
-          example: 1837 Sesame Street Brossard
-          schema:
-            type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DTOBotSearchRequest'
       responses:
         '200':
           description: 'Details about a shipment by ID'
@@ -8428,6 +8427,32 @@ SUVORK5CYII="
         ApiToken:
           type: string
           description: 'Token to be used for subsequent Nationex Api calls. The token is only valid for the related customers.'
-    
+    DTOBotSearchRequest:
+      type: object
+      properties:
+        IsDestination:
+          type: boolean
+          description: 'The address provided is the destination of the shipment'
+          example: true
+        IsOrigin:
+          type: boolean
+          description: 'The address provided is the origin of the shipment'
+          example: false
+        Name:
+          type: string
+          description: 'Name of the place or the consignee'
+        Email:
+          type: string
+        Phone:
+          type: string
+        Address:
+          type: string
+        City:
+          type: string
+        PostalCode:
+          type: string
+        ReferenceNo:
+          type: string
+          example: 'F39192028'
 security:
     - BasicAuth: []
