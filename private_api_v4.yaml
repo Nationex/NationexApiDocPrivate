@@ -6438,6 +6438,8 @@ components:
             $ref: '#/components/schemas/DTOAddressHistory'
         LastStop:
           $ref: '#/components/schemas/DTOLastStop'
+        PointOfService:
+          $ref: '#/components/schemas/DTOPointOfService'
     DTOLastStop:
       type: object
       description: "Latest stop done in the route of the shipment, contains stop count for progress percentage and geocoding"
