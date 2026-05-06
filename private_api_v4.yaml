@@ -5769,6 +5769,10 @@ components:
         SNR:
           type: boolean
           description: "No signature required"
+        NoPartialDelivery:
+          type: boolean
+          description: "Deliver all parcels of the shipment at once, mandatory, splitting into multiple deliveries is not allowed"
+          default: false
     DTOCashOnDelivery:
       type: object
       properties:
