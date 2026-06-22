@@ -6559,6 +6559,24 @@ components:
           description : "Id of the DTOPointOfService, a location where Nationex will deposit parcels and the consignee has to pick it up. Nationex will deliver directly to the point of service if this property is not null, and the Destination address (consignee address) will be overwritten by the address of this Point of service. The list of available points of services can be obtained using GET /PointsOfService/List. Points of services have to be activated on the Nationex customer for this to be available, by default it's unavailable. Only active locations are returned."
           type : number
           example : 847
+        NovexcoPurchaseOrder:
+          type: string
+          description: Novexco purchase order
+        NovexcoOrder:
+          type: string
+          description: Novexco order
+        NovexcoPackingSlip:
+          type: string
+          description: Novexco packing slip
+        NovexcoBordereau:
+          type: string
+          description: Novexco bordereau
+        NovexcoBin:
+          type: string
+          description: Novexco bin
+        NovexcoSortingCode:
+          type: string
+          description: Novexco sorting code
     DTOShipmentCreated:
       type: object
       properties:
