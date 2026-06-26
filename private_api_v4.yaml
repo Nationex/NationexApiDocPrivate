@@ -5819,7 +5819,7 @@ components:
           type: string
           description: First part of address, includes street number and street name
           example: 433 Apple street
-          maxLength: 35
+          maxLength: 50
         Address1Changed:
           type: boolean
           example: false
@@ -5827,7 +5827,7 @@ components:
           type: string
           description: Second part of address, optional
           example: 3rd floor
-          maxLength: 35
+          maxLength: 50
         Address2Changed:
           type: boolean
           example: false
@@ -6171,7 +6171,7 @@ components:
           type: string
           description: First part of address, includes street number and street name
           example: 433 Apple street
-          maxLength: 35
+          maxLength: 50
         Address1Changed:
           type: boolean
           example: false
@@ -6179,7 +6179,7 @@ components:
           type: string
           description: Second part of address, optional
           example: 3rd floor
-          maxLength: 35
+          maxLength: 50
         Address2Changed:
           type: boolean
           example: false
@@ -6709,12 +6709,12 @@ components:
           type: string
           description: First part of address, includes street number and street name
           example: 433 Apple street
-          maxLength: 35
+          maxLength: 50
         Address2:
           type: string
           description: Second part of address, optional
           example: 3rd floor
-          maxLength: 35
+          maxLength: 50
         City:
           type: string
           example: Montreal
@@ -7309,7 +7309,7 @@ components:
           type: string
           description: Consignee ddress, includes street number and street name
           example: 433 Apple street
-          maxLength: 35
+          maxLength: 50
         ConsigneeCity:
           type: string
           example: Montreal
